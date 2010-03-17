@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CS 171 Visualization - HW 4 - Visualizing an Indoor Space</title>
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/styles.css">
+<!-- thickbox -->
+  <script type="text/javascript"
+ src="writeup_files/jquery-latest.pack.js"></script>
+  <link type="text/css" rel="stylesheet"
+ href="writeup_files/thickbox.css">
+<!-- syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="writeup_files/shCore.css">
+  <link type="text/css" rel="stylesheet"
+ href="writeup_files/shThemeDefault.css">
+  <script type="text/javascript"
+ src="writeup_files/thickbox-compressed.js"></script>
+  <script type="text/javascript" src="writeup_files/shCore.js"></script>
+  <script type="text/javascript" src="writeup_files/shBrushPython.js"></script>
+  <script type="text/javascript" src="writeup_files/shBrushJava.js"></script>
+  <script type="text/javascript">//<![CDATA[
+     $(function() {
+       SyntaxHighlighter.all();
+     })
+    //]]></script>
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/colourtag-page13.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/large.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/off.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/none.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/variable.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/none_002.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/large.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/12px.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/colorbkg.html">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/normal.css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="robots" content="all">
+  <meta name="generator" content="RapidWeaver">
+  <link rel="icon" href="http://www.cs171.org/favicon.ico"
+ type="image/x-icon">
+  <link rel="shortcut icon" href="http://www.cs171.org/favicon.ico"
+ type="image/x-icon">
+  <link rel="apple-touch-icon"
+ href="http://www.cs171.org/apple-touch-icon.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<!-- Sprout theme for Rapidweaver designed by elixir graphics, www.elixirgraphics.com -->
+<div id="rwmbkg">
+<div id="container">
+<div class="hdrwrap">
+<div id="header">
+<div id="logospot"> <img src="writeup_files/seas-sheild-web.gif"
+ alt="Site logo" height="80" width="273"> </div>
+</div>
+</div>
+<div id="top">
+<div id="sitetitle">
+<h1 style="font-size: 28px;"> CS 171 Visualization HW4<br>
+</h1>
+<h1 style="font-size: 20px;"> by Farooq Ali </h1>
+<div style="color: white;"> Due date: April 15th at 5pm EST </div>
+</div>
+<div id="topsidebar">
+</div>
+</div>
+<span style="text-decoration: underline;"></span>
+<div id="contentContainer">
+<div id="content">
+<h2>Part 1: The Place (5 points)<br>
+</h2>
+<p>Whenever I'm in my house, I find myself scrounging around for power
+sockets. I'm kind of new to the house, so I'm also curious to grasp the
+whole landscape once and for all. So I visualized the majority portion
+of my house's ground floor--the lounge, kitchen and dining space. The
+visualization helps enable the following tasks, in question form:<br>
+- Where is the closest power socket?</p>
+<p>- What does it look like?<br>
+- How many power sockets are available at a point?<br>
+- Any tip on locating the power socket (e.g. behind a couch)?<br>
+- Any detailed information on the socket (e.g. NEMA5 standard 3-pin)?<br>
+</p>
+<h2>Part 2: Data Collection (15 points)<br>
+</h2>
+I created a map from scratch using PowerPoint. I intended to keep
+the design very basic and simple:<br>
+<br>
+<p><img style="width: 1049px; height: 623px; margin-left: -15px;"
+ alt="slide 3" src="LayoutSlidePictures/LayoutSlidePictures/Slide3.jpg"></p>
+<p><br>
+The data for each socket port contains the following:<br>
+&nbsp;&nbsp;&nbsp; - Self-prescribed ID (used only behind the scenes),
+e.g. L1 for lounge's 1st going clockwise from the top -- <span
+ style="font-weight: bold;">nominal</span></p>
+<p>&nbsp;&nbsp;&nbsp; - Location on the map (x- and y-coordinates) -- <span
+ style="font-weight: bold;">quantitative</span><br>
+&nbsp;&nbsp;&nbsp; - Total number of sockets -- <span
+ style="font-weight: bold;">quantitative</span><br>
+&nbsp;&nbsp;&nbsp; - Number of usually available sockets (I took one
+sample based on an arbitrary state of the area) -- <span
+ style="font-weight: bold;">quantitative<span style="font-weight: bold;"><br>
+&nbsp;&nbsp;&nbsp; </span></span>- Socket description, e.g. "Behind
+the TV in the lounge" -- <span style="font-weight: bold;">nominal</span><br>
+&nbsp;&nbsp;&nbsp; - Location tip, e.g. "To the left of the stove" -- <span
+ style="font-weight: bold;">nominal<span style="font-weight: bold;"></span></span></p>
+<p><br>
+I collected 8 sockets' information and created <a
+ href="processing_sketch/Sketch/data/housenames.tsv">housenames.tsv</a>
+to store this information (ordered as above):<br>
+<br>
+</p>
+<pre style="overflow: auto;">L1	6	2	"Nema 5" 3-pin sockets	Behind the TV in the lounge<br>L2	2	1	"Nema 5" 3-pin sockets	Behind the lamp to the left of the white couch in the lounge. One socket taken by lamp.<br>L3	2	1	'Nema 5' 3-pin sockets	Behind the lamp to the right of the white couch in the lounge. One socket taken by lamp.<br>L4	2	1	'Nema 5' 3-pin sockets	Behind the red sofa in the lounge. One socket taken by tall lamp.<br>L5	2	2	'Nema 5' 3-pin sockets	Below the big fancy mirror in the lounge<br>K1	2	2	'Nema 5' 3-pin sockets	In the kitchen dining space<br>K2	2	2	'Nema 5' 3-pin sockets	To the left of the stove<br>K3	2	1	'Nema 5' 3-pin sockets	To the right of the stove. One socket taken by microwave. Other is sometimes shared between the two toasters.<br></pre>
+<br>
+<h2>Part 3: Registering the Locations to Your Map (20 points)</h2>
+Using Ben Fry's map mouse-location tool, I obtained the
+coordinates of each socket port in the file <a
+ href="processing_sketch/Sketch/data/locations.tsv">locations.tsv</a>:<br>
+<br>
+<pre style="overflow: auto;">L1	764	62<br>L2	956	102<br>L3	956	366<br>L4	517	550<br>L5	518	227<br>K1	36	422<br>K2	36	248<br>K3	36	75<br></pre>
+<br>
+The first column is the ID of the socket port and the second and third
+columns are the X and Y coordinates of the socket port on the map. I
+had to make some changes to the original source, but nothing major. To
+ensure alignment accuracy, this file was hand-tweaked for the
+processing visualization sketch.<br>
+<br>
+<h2>Part 4: Tell Your Story (50 points)<br>
+</h2>
+<br>
+<div id="Sketch_container">
+			
+			<!--[if !IE]> -->
+				<object classid="java:Sketch.class" 
+            			type="application/x-java-applet"
+            			archive="processing_sketch/Sketch/applet/Sketch.jar"
+            			width="992" height="589"
+            			standby="Loading Processing software..." >
+            			
+					<param name="archive" value="processing_sketch/Sketch/applet/Sketch.jar" />
+					<param name="mayscript" value="true" />
+					<param name="scriptable" value="true" />
+					<param name="image" value="processing_sketch/Sketch/applet/loading.gif" />
+					<param name="boxmessage" value="Loading Processing software..." />
+					<param name="boxbgcolor" value="#FFFFFF" />
+					<param name="test_string" value="outer" />
+			<!--<![endif]-->
+				
+				<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
+						codebase="http://java.sun.com/update/1.5.0/jinstall-1_5_0_15-windows-i586.cab"
+						width="100" height="100"
+						standby="Loading Processing software..."  >
+						
+					<param name="code" value="Sketch" />
+					<param name="archive" value="processing_sketch/Sketch/applet/Sketch.jar" />
+					<param name="mayscript" value="true" />
+					<param name="scriptable" value="true" />
+					<param name="image" value="processing_sketch/Sketch/applet/loading.gif" />
+					<param name="boxmessage" value="Loading Processing software..." />
+					<param name="boxbgcolor" value="#FFFFFF" />
+					<param name="test_string" value="inner" />
+					
+					<p>
+						<strong>
+							This browser does not have a Java Plug-in.
+							<br />
+							<a href="http://java.sun.com/products/plugin/downloads/index.html" title="Download Java Plug-in">
+								Get the latest Java Plug-in here.
+							</a>
+
+						</strong>
+					</p>
+				
+				</object>
+				
+			<!--[if !IE]> -->
+				</object>
+			<!--<![endif]-->
+			
+			</div>
+			
+			<p>
+			
+			</p>
+
+			
+			<p>
+			Source code: <a href="processing_sketch/Sketch/Sketch.pde">Sketch</a> <a href="processing_sketch/Sketch/Legend.pde">Legend</a> <a href="processing_sketch/Sketch/Settings.pde">Settings</a> <a href="processing_sketch/Sketch/Socket.pde">Socket</a> <a href="processing_sketch/Sketch/Table.pde">Table</a> 
+			</p>
+
+
+
+<p><span style="font-weight: bold;">Encoding<br>
+</span>- Location on the map: <span style="font-weight: bold;">x- and
+y- position</span></p>
+<p>- Total number of sockets: <span style="font-weight: bold;">size
+(of circle)</span><br>
+- Number of sockets for an availability type (usually
+available/notavailable): <span style="font-weight: bold;">area and
+angle (of arc)</span><br>
+- Availability: <span style="font-weight: bold;">color<span
+ style="font-weight: bold;"><br>
+</span></span>- Socket description: <span style="font-weight: bold;">text
+label</span><br>
+- Location tip<span style="font-weight: bold;">: text label<span
+ style="font-weight: bold;"></span></span></p>
+<p><br>
+<span style="font-weight: bold;"><span style="font-weight: bold;"></span></span><span
+ style="font-weight: bold;"></span></p>
+<p>The encodings above were chosen based on the best-known encodings
+for the corresponding data type (nominal, ordinal, quantitative).
+Position is the best encoding for all data types. Angle and area are in
+the top 5 best encodings for quantitative data. Hue is the best next
+available encoding for the sockets' availability type. The Color Brewer
+was used to obtain a 2-class color scheme, even though the data is
+nominal. I used pink/purple on black because it achieves a pop-out
+effect and also gives a "wired" touch to the visualization.<span
+ style="font-weight: bold;"></span></p>
+<p>
+	<span style="font-weight: bold;"><br>
+		Interaction<br>
+	</span>
+</p>
+<p>The visualization makes use of linked highlighting with the legend,
+as well as context-sensitive detail on mouse over. For e.g.:<br>
+<br>
+</p>
+<p><img style="width: 993px; height: 611px;" alt="mouse over snapshot"
+ src="writeup_files/mouse_over_snapshot.png"><br>
+<span style="font-weight: bold;"><br>
+</span></p>
+<p><span style="font-weight: bold;"><span style="font-weight: bold;">Implementation</span><br>
+</span></p>
+<p>The domain model for the visualization is essentially composed of
+the <a href="processing_sketch/Sketch/Socket.pde">Socket</a> class,
+which encapsulates the following:<br>
+</p>
+<pre style="overflow: auto;"><br>public class Socket {  <br>  private Settings settings;
+  private String id, socketDescription, locationDescription;
+  private int centerX, centerY, totalSockets, availableSockets;
+  private boolean isHighlighted;<br>  ...<br>} <br></pre>
+<p><br>
+A <a href="processing_sketch/Sketch/Socket.pde">Socket</a> also knows
+exactly how to draw itself, so it's also used as a presentation class.
+Other presentation classes that know how to draw themselves are <a
+ href="processing_sketch/Sketch/Legend.pde">Legend</a> and <a
+ href="processing_sketch/Sketch/Legend.pde">LegendItem</a>. The <a
+ href="processing_sketch/Sketch/Settings.pde">Settings</a> class is
+where commonly used constants and display configurations are maintained.<br>
+</p>
+<p><br>
+Thanks to a solid OO design, the drawing logic in <a
+ href="processing_sketch/Sketch/Sketch.pde">Sketch</a> (the program
+entry point) is quite simple:<br>
+</p>
+<pre style="overflow: auto;"><br>void draw()<br>{<br>  smooth();<br>  image(mapImage, 0, 0);<br>  legend.draw();<br>  for(int i = 0; i &lt; sockets.length; i++)<br>    sockets[i].draw();<br>  //for highest z-index, draw tooltips last<br>  for(int i = 0; i &lt; sockets.length; i++)<br>    if(sockets[i].isMouseOver())<br>      sockets[i].drawToolTip();<br>}<br></pre>
+<p><br>
+</p>
+<p>
+	<span style="font-weight: bold;"><br>
+		Findings<br>
+	</span>
+</p>
+<p>For one, it was good to know that all socket ports in the area have at least one socket always available. I didn't think that was the case before this HW.<br/>
+	Both the kitchen + dining space and the TV lounge have an equal number of available sockets--coincidental symmetry?<br/>
+	If you want more than 2 sockets at one point, the three options are 1) behind the TV, 2) in the dining space and 3) to the left of the stove.
+<br>
+</p>
+<p><br>
+<br>
+</p>
+
+</div>
+</div>
+<div id="footer">
+<div id="footertype">
+<div id="footertype2">© 2008 Harvard University </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

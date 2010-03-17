@@ -1,0 +1,91 @@
+.blog-read-more a:link {
+	padding: 0px;
+	background-image: none;
+}
+
+.blog-read-more a:visited {
+	background-image: none;
+	padding: 0px;
+
+}
+
+.blog-read-more a:hover {
+	background-image: none;
+	padding: 0px;
+}
+
+.blog-entry-date {
+	background: none;
+	padding: 0px;
+}
+
+.blog-entry-category {
+	background: none;
+	padding: 0px;
+}
+
+
+.blog-entry-permalink a:link {
+	background: none;
+	padding: 0px;
+}
+
+.blog-entry-permalink a:visited {
+	background: none;
+	padding: 0px;
+}
+
+.blog-entry-permalink a:hover {
+	background: none;
+	padding: 0px;
+}
+
+.blog-archive-link-enabled {
+	background: none;
+	padding: 0px;
+}
+
+.blog-archive-link-enabled:hover {
+	background: none;
+	padding: 0px;
+}
+
+.blog-archive-link-disabled {
+	background: none;
+	padding: 0px;
+}
+
+.blog-category-link-disabled {
+	background: none;
+	padding: 0px;
+}
+
+.blog-category-link-enabled {
+	background: none;
+	padding: 0px;
+}
+
+.blog-category-link-enabled:hover {
+	background: none;
+	padding: 0px;
+}
+
+.blog-rss-link {
+	background: none;
+	padding: 0px;
+}
+
+.blog-rss-link:hover {
+	background: none;
+	padding: 0px;
+}
+
+.blog-comments-rss-link {
+	background: none;
+	padding: 0px;
+}
+
+.blog-comments-rss-link:hover {
+	background: none;
+	padding: 0px;
+}

@@ -1,0 +1,20 @@
+1237140219523	Encapsulate field 'description'
+1237140250681	Encapsulate field 'order'
+1237140309960	Delete element
+1237141977392	Extract local variable 'studentsForLanguage'
+1237142322802	Rename method 'studentsByProgrammingLanguage'
+1237143369179	Extract local variable 'list'
+1237143740487	Extract local variable 'fields'
+1237143908883	Rename field 'name'
+1237150262466	Extract local variable 'student'
+1237150309798	Rename method 'getName'
+1237151204658	Rename field 'MORE_THAN_THREE_YEARS'
+1237152126226	Extract local variable 'survey'
+1237152653707	Extract local variable 'langs'
+1237152679752	Extract local variable 'langs'
+1237153008773	Extract local variable 'expectedLanguages'
+1237153017791	Extract local variable 'actualLanguages'
+1237153369907	Rename method 'languages'
+1237153708254	Extract local variable 'retVal'
+1237162724144	Move compilation units
+1237162730829	Move compilation units

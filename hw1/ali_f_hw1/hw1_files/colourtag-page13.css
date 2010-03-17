@@ -1,0 +1,103 @@
+body {
+	background-color: #3E0007;
+}
+
+.photo-background {
+	background-color: #3E0007;
+}
+
+#container {
+	background-color: #FFFFFF;
+}
+
+#top h1 {
+	color: #FFFFFF;
+}
+
+#top h2 {
+	color: #FFFFFF;
+}
+
+a:link {
+	color: #FF4000;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #FF4000;
+	text-decoration: underline;
+}
+
+a:hover, a:active {
+	color: #992600;
+	text-decoration: none;
+}
+
+#header {
+	background: #690400;
+}
+
+#footer {
+	background: #E8E8E8;
+}
+
+#topsidebar {
+	background: #690400;
+}
+
+.bottombar {
+	background-color: #FFFFFF;
+}
+
+#footer a:link {
+	color: #5C5C5C;
+}
+
+#footer a:visited {
+	color: #5C5C5C;
+}
+
+#footer a:hover {
+	color: #121212;
+}
+
+#header2 {
+	background: #690400;
+}
+
+#hdrwrap {
+	background: #690400;
+}
+
+#top {
+	background: #690400;
+}
+
+/* @group Menu */
+
+#navcontainer #current {
+	border-bottom-color: #3E0007;
+}
+
+#navcontainer .currentAncestor {
+	border-bottom: 5px solid #3E0007;
+}
+
+/* Parent - Level 0 */
+
+#navcontainer a {
+	border-bottom: 5px solid #3E0007;
+	color: #690400;
+}
+
+#navcontainer a:visited {
+	color: #690400;
+}
+
+
+#navcontainer a:hover {
+	border-bottom-color: #250004;
+	color: #3F0200;
+}
+
+/* @end */

@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Hashtable;
+import java.util.List;
+
+public class Survey {
+	List students;
+	Hashtable groupedStudents;
+	
+	public Survey(String[] lines)
+	{
+		students = new ArrayList();
+		groupedStudents = new Hashtable();
+		for(int i = 1; i < lines.length; i++)
+			students.add(new Student(lines[i]));
+		groupStudentsByProgrammingLanguage();
+	}
+	
+	public String[] getLanguages()
+	{
+		ArrayList langs = new ArrayList(groupedStudents.keySet());
+		Collections.sort(langs);
+		return (String[]) langs.toArray(new String[langs.size()]);
+	}
+	
+	public Student[] getStudentsUsingProgrammingLanguage(String language)
+	{
+		List s = (List) groupedStudents.get(language);
+		return (Student[]) s.toArray(new Student[s.size()]);
+	}
+	
+	public Hashtable getStudentsByProgrammingLanguage()
+	{
+		return groupedStudents;
+	}
+	
+	private Hashtable groupStudentsByProgrammingLanguage()
+	{
+		groupedStudents = new Hashtable();
+		for(int i = 0; i < students.size(); i++)
+		{
+			Student student = (Student) students.get(i);
+			
+			if(!groupedStudents.containsKey(student.getProgrammingLanguage()))
+				groupedStudents.put(student.getProgrammingLanguage(), new ArrayList());
+			
+			List studentsForLanguage = (List) groupedStudents.get(student.getProgrammingLanguage());
+			studentsForLanguage.add(student);
+		}
+		
+		return groupedStudents;
+	}
+}

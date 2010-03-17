@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.lineEnd,1237142008140
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.select.wordPrevious,1237142030076
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.select.wordPrevious,1237142035116
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.select.wordPrevious,1237142038620
+executed,command,org.eclipse.ui,3.4.0.I20080610-1200,org.eclipse.ui.edit.text.contentAssist.proposals,1237142045180
+executed,command,org.eclipse.ui.ide,3.4.0.I20080606-1300,org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals,1237142050863
+executed,command,org.eclipse.ui,3.4.0.I20080610-1200,org.eclipse.ui.file.save,1237142054492
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142054837
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142055020
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142055180
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142055332
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142055509
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142055660
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142055828
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142056053
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordNext,1237142058028
+executed,command,org.eclipse.ui.ide,3.4.0.I20080606-1300,org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals,1237142063483
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142066284
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.lineEnd,1237142077749
+no handler,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.lineStart,1237142080731
+no handler,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.lineStart,1237142080731
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordNext,1237142080997
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordNext,1237142081188
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordNext,1237142081460
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.0.v20080603-2000,org.eclipse.ui.edit.text.goto.wordPrevious,1237142082420

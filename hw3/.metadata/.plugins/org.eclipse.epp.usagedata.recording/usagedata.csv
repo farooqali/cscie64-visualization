@@ -1,0 +1,13 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.wst.common.ui,1.1.301.v200805140415,org.eclipse.wst.common.ui,1237215608593
+stopped,bundle,org.eclipse.wst.sse.ui,1.1.0.v200806041847,org.eclipse.wst.sse.ui,1237215608653
+stopped,bundle,org.eclipse.search,3.4.0.v20080603-2000,org.eclipse.search,1237215608653
+stopped,bundle,org.eclipse.ltk.ui.refactoring,3.4.0.v20080605-1800,org.eclipse.ltk.ui.refactoring,1237215608653
+stopped,bundle,org.eclipse.team.cvs.ui,3.3.100.I20080604,org.eclipse.team.cvs.ui,1237215608704
+stopped,bundle,org.eclipse.team.ui,3.4.0.I20080604,org.eclipse.team.ui,1237215608708
+stopped,bundle,org.eclipse.compare,3.4.0.I20080604,org.eclipse.compare,1237215608708
+stopped,bundle,org.eclipse.ui.externaltools,3.2.0.v20080514-1542,org.eclipse.ui.externaltools,1237215608776
+stopped,bundle,org.eclipse.debug.ui,3.4.0.v20080529-1300,org.eclipse.debug.ui,1237215608790
+stopped,bundle,org.eclipse.equinox.p2.ui.sdk,1.0.0.v20080605-1731,org.eclipse.equinox.p2.ui.sdk,1237215608790
+stopped,bundle,org.eclipse.equinox.p2.ui,1.0.0.v20080530-1237,org.eclipse.equinox.p2.ui,1237215608790
+stopped,bundle,org.eclipse.equinox.security.ui,1.0.0.v20080603-1810,org.eclipse.equinox.security.ui,1237215608853

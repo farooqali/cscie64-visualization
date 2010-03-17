@@ -1,0 +1,102 @@
+public class Student {
+	private String concentration, 
+				   hometown, 
+				   operatingSystem, 
+				   codingFrequency, 
+				   programmingLanguage, 
+				   interstingFactoid, 
+				   gender, 
+				   age;
+	private int comfortLevel;
+	private Experience experience;
+	
+	public Student(String age, String codingFrequency, int comfortLevel,
+			Experience experience, String gender, String hometown,
+			String interstingFactoid, String name, String operatingSystem,
+			String programmingLanguage) {
+		super();
+		this.age = age;
+		this.codingFrequency = codingFrequency;
+		this.comfortLevel = comfortLevel;
+		this.experience = experience;
+		this.gender = gender;
+		this.hometown = hometown;
+		this.interstingFactoid = interstingFactoid;
+		this.concentration = name;
+		this.operatingSystem = operatingSystem;
+		this.programmingLanguage = programmingLanguage;
+	}
+	
+	public Student(String string) {
+		String[] fields = string.split(",");
+		concentration = fields[0];
+		hometown = fields[1];
+		operatingSystem = fields[2];
+		experience = Experience.parse(fields[3]);
+		codingFrequency = fields[4];
+		programmingLanguage = fields[5];
+		interstingFactoid = fields[5];
+		gender = fields[6];
+	}
+
+	public String getName() {
+		return concentration;
+	}
+	public void setName(String name) {
+		this.concentration = name;
+	}
+	public String getHometown() {
+		return hometown;
+	}
+	public void setHometown(String hometown) {
+		this.hometown = hometown;
+	}
+	public String getOperatingSystem() {
+		return operatingSystem;
+	}
+	public void setOperatingSystem(String operatingSystem) {
+		this.operatingSystem = operatingSystem;
+	}
+	public String getCodingFrequency() {
+		return codingFrequency;
+	}
+	public void setCodingFrequency(String codingFrequency) {
+		this.codingFrequency = codingFrequency;
+	}
+	public String getProgrammingLanguage() {
+		return programmingLanguage;
+	}
+	public void setProgrammingLanguage(String programmingLanguage) {
+		this.programmingLanguage = programmingLanguage;
+	}
+	public String getInterstingFactoid() {
+		return interstingFactoid;
+	}
+	public void setInterstingFactoid(String interstingFactoid) {
+		this.interstingFactoid = interstingFactoid;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+	public int getComfortLevel() {
+		return comfortLevel;
+	}
+	public void setComfortLevel(int comfortLevel) {
+		this.comfortLevel = comfortLevel;
+	}
+	public Experience getExperience() {
+		return experience;
+	}
+	public void setExperience(Experience experience) {
+		this.experience = experience;
+	}
+}

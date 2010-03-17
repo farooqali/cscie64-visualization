@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      CS 171 Visualization - HW 2
+    </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/styles.css" />
+    <!-- thickbox --> 
+    <script type="text/javascript" src="writeup_files/jquery-latest.pack.js"></script>
+    <link type="text/css" rel="stylesheet" href="writeup_files/thickbox.css" />
+    <!-- syntax highlighting -->
+    <link type="text/css" rel="stylesheet" href="writeup_files/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="writeup_files/shThemeDefault.css" />
+    <script type="text/javascript" src="writeup_files/thickbox-compressed.js"></script>
+    <script type="text/javascript" src="writeup_files/shCore.js"></script>
+    <script type="text/javascript" src="writeup_files/shBrushPython.js"></script>
+    <script type="text/javascript" src="writeup_files/shBrushJava.js"></script>
+    <script type="text/javascript">//<![CDATA[
+     $(function() {
+       SyntaxHighlighter.all();
+     })
+    //]]></script>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/colourtag-page13.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/medium.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/off.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/none.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/variable.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/none_002.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/large.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/12px.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/colorbkg.html" />
+    <link rel="stylesheet" type="text/css" media="screen" href="writeup_files/normal.css" />
+        
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <meta name="generator" content="RapidWeaver" />
+    <link rel="icon" href="http://www.cs171.org/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://www.cs171.org/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://www.cs171.org/apple-touch-icon.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <!-- Sprout theme for Rapidweaver designed by elixir graphics, www.elixirgraphics.com -->
+    <div id="rwmbkg">
+      <div id="container">
+        <div class="hdrwrap">
+          <div id="header2"></div>
+          <div id="header">
+            <div id="logospot">
+              <img src="writeup_files/seas-sheild-web.gif" alt="Site logo" height="80" width="273" />
+            </div>
+          </div>
+        </div>
+        <div id="top">
+          <div id="sitetitle">
+            <h1 style="font-size: 28px">
+              CS 171 Visualization HW 2<br/> Design Critique and Redesign
+            </h1>
+            <h1 style="font-size: 20px">
+              by Farooq Ali
+            </h1>
+            <div style="color: white">
+              Due date: February 25th at 5pm EST
+            </div>
+          </div>
+          <div id="topsidebar">
+            <div class="sidebarHorizontal"></div>
+          </div>
+        </div>
+        <div id="navcontainer">
+          <ul>
+            <li>
+              <a href="#part1a" rel="self">Part 1A: The Good</a>
+            </li>
+            <li>
+              <a href="#part1b" rel="self">Part 1B: The Bad</a>
+            </li>
+            <li>
+              <a href="#part2" rel="self">Part 2: Turn That Frown Upside Down!</a>
+            </li>
+          </ul>
+        </div>
+        <div id="contentContainer">
+          <div id="sidebarSide"></div>
+          <div id="content">
+            <h2>
+              <a name="part1a" id="part1a">Part 1: The Good, the Bad, and the... (50 points)</a>
+            </h2>
+            <h5 style="color: #666">The Good: Python Code Swarm</h5><br/>
+            <p>
+              Website: <a href="http://vis.cs.ucdavis.edu/~ogawa/codeswarm/">http://vis.cs.ucdavis.edu/~ogawa/codeswarm/</a>
+            </p>
+            <p>
+              <center><object width="400" height="302"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=1093745&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=1093745&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="302"></embed></object><br /><a href="http://vimeo.com/1093745">code_swarm - Python</a> from <a href="http://vimeo.com/michaelogawa">Michael Ogawa</a> on <a href="http://vimeo.com">Vimeo</a>.</center>
+            </p>
+            
+            <h4>Explanation</h4>
+            <p>
+              code_swarm is an organic visualization experiment that attempts to visualize the evolution of software codebase by monitoring a source code management (SCM) repository.
+              Source code management allows the development of software by multiple developers and keeps track of files and changes made to those files as revisions.
+              Everytime a developer makes a change to the code, they can "commit" or "check in" the change to the repository, where the master copy of the code resides, and thus make it available
+              to everyone on the team. Then team members can "update" or "check out" their local copy of the code from the repository and work with the latest and greatest. 
+              There are many more details about SCMs, such as file locking and conflict resolution, which we will not discuss as they are out of the scope of this visualization.
+              The key objective of this visualization is to show how open source contributions by team members helped evolve the codebase over time.
+            </p>
+            
+            <p>
+              The intended audience varies based on what the repository is hosting. In general, it can be any person wanting to better understand how the contributions
+              of team members helped shape the project and how significant each team member was to the evolution of the project. 
+              For software codebases, the intended audience is primarily developers, technical project leads, architects, and maybe the not-so-technical folks such as project managers.
+              But often books, graphic designs, and business analysis (with spreadsheets and word documents) are also version-controlled with SCMs, so 
+              it's also possible that designers, authors, business analysts, and other non-technical people would use the visualization.
+              Since we'll be analyzing the Python code_swarm, anyone interested in how Python's codebase evolved with the help of the open source
+              community--since Guido van Rossumm first released it to the public domain--can be considered the intended audience.
+            </p>
+            
+            <h4>Deconstruction</h4>
+            <p>
+              The data set of the Python code swarm is the history of commits (of files) to a repository. 
+              The commits are broken down into code files (.py files) or documents (all other extensions).
+              When a developer commits a file, a dot representing the file lights up and flies towards the developer's name. 
+              Files are colored according to their purpose, such as whether they are source code or a document. 
+              If files or developers have not been active for a while, they will fade away.
+              A histogram at the bottom shows the size of a commit and helps keep track of what has come before.
+            </p>
+            <p>
+              The visualization helps perform the following tasks listed in question form:
+              <ul>
+                <li>How much collaboration has been taking place in developing Python?</li>
+                <li>Who all contributed to Python?</li>
+                <li>What kind of contributions have people made to Python? (ie code or documentation)</li>
+                <li>How is collaboration and contribution changing over time?</li>
+                <li>How active has the Python codebase been?</li>
+                <li>Who have been the most significant contributors to Python in different time periods?</li>
+                <li>How did external events affect the contributions and activity levels of Python?</li>
+              </ul>
+            </p>
+            
+            <p>All three visual data types, quantitative, ordinal, and nominal are used in this visualization. 
+               The actual encodings of those data types are more complex for organic visualizations. 
+               Most of the ones identified below form composite encodings when coupled with the time domain:
+              
+              <div style="margin-left: 10px">
+                <h4>Quantitative:</h4>
+                <ul>
+                  <li>number of commits in a day: encoded with the length of the bars/spikes in the histogram</li>
+                  <li>time since a file was last changed: encoded with the brightness of the dot representing the file</li>
+                  <li>time since developer last committed: encoded with the brightness of the name of the developer</li>
+                  <li>number of commits for a given file type: encoded with the length of hue corresponding to the file type in the bar/spike of the histogram</li>
+                </ul>
+              
+                <h4>Ordinal:</h4>
+                <ul>
+                  <li>Date of the current frame/image: encoded with the x-position of the bars/spikes in the histogram as well as in text at the bottom right corner</li>
+                </ul>
+              
+                <h4>Nominal:</h4>
+                <ul>
+                  <li>Name of developer: encoded as text using same color for all names</li>
+                  <li>File type: encoded as the hue of the dot and the hue of the bar/spike in the histogram</li>
+                  <li>Whether the developer committed on the current frame/image: binary encoded with the size of the name (big or small)</li>
+                </ul>
+              </p>
+            </div>
+            
+            <h4>Critique</h4>
+            <p>
+              The visualization does a good job of showcasing the contributions and activities of open source members in developing Python.
+              The visualization reveals several patterns and facts that would not be easily perceived by merely looking at the repository logs. Some of these are:
+              <ul>
+                <li>For the first year, 1991, only Guido was working on Python. Later in 1992, some minor contributions were made by a couple of other hackers.</li>
+                <li>The code was changing and maturing steadily upto the mid-1990's, which is when Jack Janson's (creator of MacPython) activity levels and codebase reach started to spike to high levels.</li>
+                <li>The blue dots swirling around fdrake show the enormous contributions that Fred Drake made to the documentation of Python, who eventually becomes the Lead Documenter of the project.</li>
+                <li>In April 1999, version Python 1.5.2 was released and activity levels remained about the same. </li>
+                <li>A year later, in 2000, version 1.6.1 was released, which saw the burst of interest and outpour of future contributions from many more open source hackers. Python made it to the mainstream!</li>
+                <li>The histogram's spike over the top of the screen leverages context to show how massively active Python was relative to older times.</li>
+                <li>After Python went mainstream, the sharp solid circles around developers started to fade and blur, indicating that development of Python was very well spread out across many more contributers,
+                and there weren't anymore lone soldier heroics, as more people played small parts. This may also indicate that the Python codebase had become more stable and as a result, fewer monolithic and
+                fewer radical changes were being made to the codebase.</li>
+              </ul>
+              
+              The visualization also makes very good use of perceptual principles, especially R1, R2, R3, R12 and R13. Vivid colors are used to achieve popouts, 
+              with high brightness levels to indicate the core task target, activity levels (of files and developers). A dull, low-saturation background and 
+              high saturation foreground helps focus on the meaningful data, such as the size of commits, frequency of commits, and activity levels of developers.
+              File types are effectively encoded with varying hues, making them easier to group in the V1 area of the audience's mind via preattentive processing.
+              Motion is brilliantly used to exploit the peripheral areas of the vision space by making files (dots) fly over to the attention of the fovea. 
+              The bivariate sizing of developer names is also very effective at indicating activity, as the sizing up of the name highlights the event of a developer checking in.
+              Developer names are rightly grouped using the same saturation levels, but varying brightness for activity.
+            </p>
+            <br/>
+            <p>
+              The designer of the code_swarm adhered to good design principles, such as:
+              <ul>
+                <li>employing the time domain and providing a time narrative</li>
+                <li>maximizing data-ink ratio (e.g. no grids on the histogram)</li>
+                <li>avoiding chart junk</li>
+                <li>aptly using context to convey the magnitude of commits in a day compared to other days</li>
+              </ul>
+            </p>
+            
+            <h5 style="color: #666"><a name="part1b" id="part1b">The Bad: Mother Tongues of Computer Languages</a></h5><br/>
+            <p>
+              Website: <a href="http://www.digibarn.com/collections/posters/tongues">http://www.digibarn.com/collections/posters/tongues</a>
+            </p>
+            <p>
+              <center>
+                <a href="writeup_files/ComputerLanguagesChart-med.png"><img border="0" src="writeup_files/tongues-small.jpg"></a><br/>
+                (click to enlarge)
+              </center>
+            </p>
+            
+            <h4>Explanation</h4>
+            <p>
+              This visualization first appeared as a poster in the Wired Magazine. It attempts to give us a peek at the strongest branches of computer languages.
+              It traces the lineage of computer programming languages back to Fortran in 1954. The visualization distinguishes between languages that are active (thousands of users),
+              protected (taught at universities and/or whose compilers are available), endangered (usage dropping off), and extinct (no known active users or up-to-date compilers).              
+            </p>
+            
+            <p>
+              The visualization flow from left to right. A horizontal line connecting a language on the left with a language on the right indicates the transition to a new version. 
+              For example, Lisp transitions to Common Lisp in the mid-80's, which transitions to ANSI Common Lisp in the early 90's. 
+              Meanwhile, a diagonal line connecting two languages on different y-positions indicates the birth of a new language that spawned off of the first language.
+              For example, C# spawned off of the C++ language in 2000. A language can spawn off of multiple parent languages.
+            </p>
+            
+            <p>
+              The audience is clearly those interested in programming languages from a historical perspective. Computer programmers, technology junkies, software archaeologists and other
+              technical people familiar with the concept of programming, computers, languages, and technology.
+            </p>
+            
+            <p>
+              The visualization helps perform the following tasks listed in question form:
+              <ul>
+                <li>Which languages were certain languages influenced by or spawned off?</li>
+                <li>Which languages are extinct?</li>
+                <li>Which languages are active?</li>
+                <li>Which languages are endangered?</li>
+                <li>Who have been the most significant contributors to Python in different time periods?</li>
+                <li>How did external events affect the contributions and activity levels of Python?</li>
+              </ul>
+            </p>
+            
+            <h4>Deconstruction</h4>
+            <p>
+              The data set is composed of a list of languages, their birth dates, their influences and their status. 
+              Two visual data types are used to represent the information: ordinal and nominal:
+                            
+              <div style="margin-left: 10px">
+                <h4>Ordinal:</h4>
+                <ul>
+                  <li>Birth year of a language: encoded by the x-position of the language</li>
+                  <li>Languages that influenced/gave birth to a language: encoded with light-weight diagonal line connections</li>
+                  <li>The current state of a language (active, protected, endangered, extinct): encoded with the color of the box representing the language</li>
+                  <li>Different versions of a language: encoded with heavy horizontal lines connections</li>
+                  <li>Year: encoded by x-position of an entity in the visualization and grey vertical lines, each labeled with the year it represents</li>
+                </ul>
+              
+                <h4>Nominal:</h4>
+                <ul>
+                  <li>The actual language: encoded with name of the language enclosed in a solid box</li>
+                  <li>Whether a language's lineage continues: encoded with the presence of a right arrow connected to the right side of the language box</li>
+                  <li>Descriptions of a language: encoded with a square-shaped speech bubble connected to the language box</li>
+                </ul>
+              </p>
+            </div>
+            
+            <h4>Critique</h4>
+            <p>
+              The visualization is a good choice, but suboptimally implemented. It lacks several characteristics defined by good design and perceptual principles.
+              While it is possible to trace the lineage of a language back to its roots or vice versa, those kinds of tasks require more cognitive processing in V4.
+              What can be improved upon is the visualization's exploitation of preattentive processing using certain features and patterns that would instantly
+              provide the user with an idea of how to solve the task at hand. Specifically:
+              <ul>
+                <li>The horizontal version transitionary lines are too heavy, saturated and bright and causing them to the first target of preattentive processing. This isn't very good use of the features as they don't tell us much by themselves.</li>
+                <li>The visualization is very cluttered with speech bubbles, which prevents the V1 area from processing any meaningful patterns or features except for lines</li>
+                <li>The descriptions of the languages not only cause clutter, but aren't essential and can be shown elsewhere</li>
+                <li>There varying hues of the speech bubbles are pointless. If their display is necessary, V2 should be able to group them naturally, perhaps with the help of consistent hue and lower intensity.</li>
+                <li>The sharp edgy transitions/forks to new languages is awkward and straining on the eyes. Curved connecting lines are a good alternative.</li>
+                <li>Nonoptimal data-ink ratio</li>
+              </ul>
+            </p>
+            
+            <h2>
+              <a name="part2" id="part2">Part 2: Turn That Frown Upside Down! (50 points)</a>
+            </h2>
+            <p>
+              My redesign attempts to maximize the data-ink ratio, remove chart junk, and maximize data density, while applying some
+              perceptual design rules. Since the visualization itself is gigantic, I redesigned a representative portion of it to 
+              showcase all the new enhancements. The time taken to edit the original and arrive at this cropped image was an 
+              arduous task in itself. The software tool used to make the modifications was Adobe Photoshop CS2.
+            </p>
+            <p>
+              <center><img src="writeup_files/some-computer-languages-redone.gif"></center>
+            </p>
+            <p>In my critique, I argued that the horizontal transitionary lines are too heavy and bright, causing
+              them to be the first target of attention, which is not very useful. Hence, my design decreases the saturation, brightness
+              and weight of the lines, thereby lowering its importance in the visual space.
+            </p>
+            <p>
+              To reduce the clutter and capture the essence of the genealogy, I completely removed the speech bubbles with snippets of 
+              information about some of the languages. This eliminates the severe distractions the bubbles caused, increases data-ink ratio
+              (ie no ink used on fancy speech bubble enclosure), and allows the V1 to recognize more meaningful patterns in the visualization.
+            </p>
+            <p>
+              I also used a lighter grey to for the vertical lines marking the years. I first attempted to completely remove the lines, but
+              then realized it was harder for me to visually identify the associated year for the time narrative. Then I tried to remove
+              every alternate line, but the visualization ended up looking like a grid and gave the impression that the squares in the grid were
+              an intentional grouping of the languages in the square. Also, the lack of the consistent and clear separation between the years in 
+              each resulting pair had negative side effects, so I finally decided to stick with a reduction of brightness, which worked out well.
+            </p>
+            <p>
+              The improved visualization employs curved lines instead of diagonal and straight lines to connect language influences. 
+              The curved lines successfully lighten the load on our visual system. They no longer require the discrete feature matching 
+              of various-angled lines and their junctions to recognize the pattern of connections, 
+              but rather provides a single continuously flowing pattern that is easy for our visual system to detect.
+            </p>
+            <p>
+              Finally, instead of using all four sides of the languages' enclosures (box borders), only the left and right are used. The sides
+              are used to identify older versions leading to newer versions and influencing/parent languages spawning
+              new languages. As a result, it is easy for us to detect, for examples, how many languages influenced the PL/1 language, because
+              all four incoming connections merge at one point. If you were to compare PL/1's connections to the ones in the old visualization,
+              you can notice a massive increase in visual communication effectiveness, more formally characterized as higher data-density ratio
+              in this case.
+            </p>
+          </div>
+        </div>
+        <div class="clearer"></div>
+        <div id="footer">
+          <div id="footertype">
+            <div id="bottomsidebar">
+              <div class="sidebarHorizontal"></div>
+            </div>
+            <div id="categories"></div>
+            <div class="clearer"></div>
+            <div id="breadcrumbcontainer"></div>
+            <div id="footertype2">
+              © 2008 Harvard University
+            </div>
+          </div>
+        </div>
+        <div class="bottombar"></div>
+      </div>
+    </div>
+  </body>
+</html>

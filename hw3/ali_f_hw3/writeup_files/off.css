@@ -1,0 +1,18 @@
+#sidebarSide {
+	display: none;
+	float: none;
+}
+
+#content {
+	margin: 9px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#topsidebar {
+	display: none;
+}
+
+#bottomsidebar {
+	display: none;
+}

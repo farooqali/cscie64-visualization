@@ -1,0 +1,1184 @@
+/* @group Global Classes */
+
+.clearer {
+	clear: both;
+}
+
+blockquote {
+  margin: 1em 40px;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: .67em 0;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: .83em 0;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+h4 {
+  display: block;
+  font-weight: bold;
+  margin: 1.33em 0;
+}
+
+ul, menu, dir {
+ display: block;
+ list-style-type: disc;
+ margin: 1em 0;
+}
+
+ol {
+ display: block;
+ list-style-type: decimal;
+ margin: 1em 0;
+}
+
+li {
+ display: list-item;
+ margin: 1em 0;
+}
+
+.imageStyle {
+
+}
+
+/* @end */
+
+
+pre.terminal {
+  padding: 5px;
+  background: black;
+  color: green;
+  font-family: Courier;
+  overflow: auto;
+}
+
+blockquote.answer {
+  padding: 5px;
+  background-color: beige;
+  font-family: Courier;
+  border: 1px solid #666;
+}
+
+/* @group General Styles */
+
+.image-left {
+	float: left;
+	margin: 3px 3px 3px 0;
+	padding: 3px 3px 3px 0px;
+}
+
+.image-right {
+	float: right;
+	margin: 3px 0 3px 3px;
+	padding: 3px 0 3px 3px;
+}
+
+body {
+	color: #333333;
+	text-align: center;
+	margin: 0;
+	font-family: 'Lucida Grande', LucidaGrande, Lucida, Helvetica, Arial, sans-serif;
+}
+
+a:link {
+	text-decoration: underline;
+}
+
+a:visited {
+	text-decoration: underline;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+}
+/* @end */
+
+/* @group Layout */
+
+#logospot {
+	float: right;
+	margin-right: 0;
+}
+
+#topsidebar {
+	display: none;
+}
+
+#bottomsidebar {
+	display: none;
+}
+
+#top h1 {
+	color: #999999;
+	font-weight: bold;
+	font-family: 'Lucida Grande', LucidaGrande, Lucida, Helvetica, Arial, sans-serif;
+	background-color: transparent;
+}
+
+#top h2 {
+	color: #999999;
+	font-style: normal;
+	font-family: 'Lucida Grande', LucidaGrande, Lucida, Helvetica, Arial, sans-serif;
+	background-color: transparent;
+}
+
+#header2 {
+	display: none;
+	background-color: transparent;
+}
+
+#footertype2 {
+	margin-top: 12px;
+}
+
+#header {
+	margin-bottom: 4px;
+	margin-top: 0;
+	background-color: transparent;
+}
+
+.hdrwrap {
+	margin-right: 20px;
+	margin-left: 20px;
+	background-color: transparent;
+}
+
+#sidebarSide {
+	display: none;
+}
+
+#sidebarSide h3 {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	margin: 0 0 12px;
+}
+
+.sidebarHorizontal {
+	background: #ffffff;
+}
+
+.sidebarHorizontal h3 {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	margin: 0 0 12px;
+}
+
+#content {
+}
+
+#contentContainer {
+	margin: 50px 40px 20px;
+	float: none;
+}
+
+#top {
+	margin: 0 20px;
+	padding-top: 15px;
+	padding-bottom: 18px;
+}
+
+#footer {
+	margin: 12px 20px 0;
+	text-align: center;
+	padding-top: 12px;
+}
+
+#footertype {
+	padding-bottom: 18px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#container {
+	text-align: left;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background: #ffffff;
+	width: 1100px;
+}
+
+.bottombar {
+	height: 20px;
+	background: #ffffff;
+}
+
+#sitetitle {
+	margin-right: 12px;
+	margin-left: 12px;
+}
+	
+/* @end */
+
+/* @group Menu */
+
+#navcontainer {
+	position: relative;
+	z-index: 5;
+	text-align: left;
+	font-size: 12px;
+	margin-top: 7px;
+	margin-right: 15px;
+	margin-left: 20px;
+}
+
+#navcontainer #current {
+	border-bottom-color: #808080;
+}
+
+#navcontainer #current:hover {
+}
+
+#navcontainer .currentAncestor {
+	border-bottom: 5px solid #808080;
+}
+
+/* Parent - Level 0 */
+
+#navcontainer ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+#navcontainer li {
+	display: inline;
+}
+
+#navcontainer a {
+	text-decoration: none;
+	padding-bottom: 3px;
+	border-bottom: 5px solid #e9e9e9;
+	margin-right: 10px;
+}
+
+#navcontainer a:hover {
+	border-bottom-color: #808080;
+}
+
+#navcontainer a:active {
+}
+
+/* Child - Level 1 */
+
+#navcontainer ul ul {
+	position: absolute;
+	left: 0;
+	top: 15px;
+	padding: 8px 0;
+	margin-top: 8px;
+	width: 100%;
+	border-width: 1px;
+	display: block;
+}
+
+#navcontainer ul ul li {
+}
+
+#navcontainer ul ul a {
+	border: none;
+}
+
+#navcontainer ul ul a:hover{
+}
+
+#navcontainer ul ul #current{
+}
+
+#navcontainer ul ul .currentAncestor {
+	border-top-color: #231c1b;
+}
+
+/* Child - Level 2 */
+
+#navcontainer ul ul ul {
+	display: none;
+}
+
+/* @end */
+
+/* @group Contact Form */
+.message-text {
+	color: #999999;
+	font-size: 12px;
+} 
+
+.required-text {
+	font-size: 10px;
+} 
+
+.form-input-field {
+	width: 99%;
+} 
+
+.form-input-button { } 
+/* @end */
+
+/* @group Bread-crumb */
+
+#breadcrumbcontainer {
+	text-align:
+	clear: both;
+	font-weight: bold;
+	font-size: 9px;
+	color: #666666;
+	padding-top: 12px;
+}
+
+#breadcrumbcontainer ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+}
+
+#breadcrumbcontainer li {
+	padding: 0px;
+	display: inline;
+}
+
+#breadcrumbcontainer a {
+	display: inline;
+}
+
+#breadcrumbcontainer a:hover {
+	display: inline;
+}
+	
+/* @end */
+
+/* @group Photo Album */
+
+/* @group Index Page (Thumbnail view) */
+
+.album-title {
+	font-size: 24px;
+	font-weight: normal;
+	margin-bottom: 8px;
+	letter-spacing: -1.5px;
+}
+
+.album-description {
+	margin-bottom: 60px;
+	color: #999999;
+	font-size: 12px;
+	text-align: left;
+}
+
+.album-wrapper {
+	display: block;
+	width: 99%;
+	position: relative;
+}
+
+.thumbnail-wrap {
+	text-align: center;
+	position: relative;
+	float: left;
+	margin-bottom: 60px;
+	margin-right: 10px;
+}
+
+.thumbnail-frame {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.thumbnail-frame img {
+    margin: auto;
+    border: none;
+}
+
+.thumbnail-caption {
+	margin: 0;
+	padding: 0;
+	height: 35px;
+	display: block;
+}
+	
+/* @end */
+
+/* @group Single Page (Photo view) */
+
+.photo-background {
+	text-align: center;
+	margin: 10px;
+	background: #000000;
+	color: #ffffff;
+}
+
+.photo-navigation {
+	padding: 10px;
+	text-align: left;
+	background: #666666;
+	width: 450px;
+	font-size: 10px;
+	margin: 25px auto 18px;
+}
+
+#photo-navigation a {
+	text-decoration: none;
+	text-align: left;
+	font-size: 10px;
+	color: #000000;
+}
+
+.photo-navigation a:hover {
+	text-decoration: none;
+}
+
+.photo-frame{
+	margin: 0px;
+	border: solid #ffffff 3px;
+}
+
+.photo-links {
+}
+
+.photo-title {
+	font-weight: normal;
+	margin: 0px 0px 5px 0px;
+	font-size: 24px;
+	text-align: left;
+}
+
+.photo-caption {
+	font-size: 11px;
+	margin: 0px;
+	color: #999999;
+	padding-top: 3px;
+}
+
+/* @end */
+	
+/* @end */
+
+/* @group File Sharing */
+
+.filesharing-description {
+	margin-bottom: 20px;
+	font-size: 12px;
+	color: #999999;
+}
+
+.filesharing-item {
+	
+}
+
+.filesharing-item-title {
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.filesharing-item-description {
+	margin-bottom: 10px;
+}
+
+/* @end */
+
+/* @group Quicktime Page */
+
+.movie-description {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+	
+/* @end */
+
+/* @group Quicktime Album */
+
+/* @group Index Page (Movie Thumbnail view) */
+
+.movie-page-title {
+	color: #000000;
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+.movie-page-description {
+	margin-bottom: 5px;
+	color: #999999;
+}
+
+.movie-thumbnail-frame {
+	float: left;
+	display: inline;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.movie-thumbnail-caption {
+	text-align: left;
+	font-size: 0.9em;
+	color: #666666;
+}
+	
+/* @end */
+
+/* @group Single Page (Movie View) */
+
+.movie-background {
+	background: #000000;
+	margin-top: 5px;
+}
+
+.movie-title {
+	color: #000000;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.movie-frame {
+	text-align: center;
+	margin-bottom: 10px;
+}
+	
+/* @end */
+
+
+/* @end */
+
+/* @group Blog */
+
+/* @group Archive Page */
+
+.blog-archive-background {
+	text-align: center; /* To Make Content Centered */
+	font: 12px 'Lucida Grande', Geneva, Arial, Verdana, sans-serif;
+}
+
+.blog-archive-headings-wrapper {
+	text-align: left;
+}
+
+.blog-archive-entries-wrapper {
+	text-align: left;
+}
+
+.blog-archive-month {
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.blog-archive-link {
+	margin-bottom: 18px;
+}
+	
+/* @end */
+
+.blog-entry {
+	letter-spacing: -.5px;
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+.blog-entry-summary {
+	letter-spacing: -.5px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.blog-read-more {
+	font-weight: bold;
+	display: block;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.blog-read-more a:link {
+	font-weight: bold;
+	padding-left: 16px;
+	background: no-repeat url(../../images/greendoc.gif);
+}
+
+.blog-read-more a:visited {
+	font-weight: bold;
+	padding-left: 16px;
+	background: no-repeat url(../../images/greendoc.gif);
+}
+
+.blog-read-more a:hover {
+	font-weight: bold;
+	padding-left: 16px;
+	background: no-repeat url(../../images/greendochover.gif);
+}
+
+.blog-entry-title {
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	color: #808080;
+	text-decoration: none;
+}
+
+.blog-entry-title a:link {
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	color: #808080;
+	text-decoration: none;
+}
+
+.blog-entry-title a:visited {
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	color: #808080;
+	text-decoration: none;
+}
+
+.blog-entry-title a:hover {
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	color: #c3c3c3;
+	text-decoration: none;
+}
+
+.blog-entry-date {
+	margin-bottom: 12px;
+	margin-top: 10px;
+	font-size: 10px;
+	background: url(images/greenclock.gif) no-repeat left center;
+	padding-left: 16px;
+}
+
+.blog-entry-body {
+}
+
+.blog-entry-comments {
+	padding-top: 5px;
+	text-align: left;
+	font-size: .85em;
+	color: #999999;
+}
+
+.blog-entry-category {
+}
+
+.blog-entry-permalink {
+}
+
+.blog-entry-permalink a:link {
+	padding-left: 16px;
+	background: url(images/greenarrow.gif) no-repeat;
+}
+
+.blog-entry-permalink a:visited {
+	padding-left: 16px;
+	background: url(images/greenarrow.gif) no-repeat;
+}
+
+.blog-entry-permalink a:hover {
+	background: url(images/greenarrowhover.gif) no-repeat;
+	padding-left: 16px;
+}
+	
+/* @end */
+
+/* @group New Blog Styles */
+
+p.blog-entry-tags {
+}
+/* Styles blog tag links normal and visited state */
+p.blog-entry-tags a:link,
+p.blog-entry-tags a:visited {
+}
+
+/* Styles blog tag links hover state */
+p.blog-entry-tags a:hover {
+}
+
+/* Styles blog tag links active state */
+p.blog-entry-tags a:active {
+}
+
+/* Styles the tag clous un-ordered list */
+ul.blog-tag-cloud {
+	padding: 0;
+	width: 20%;
+	float: left;
+	text-align: left;
+	margin-top: 0;
+	margin-right: 10px;
+}
+
+/* Styles tag cloud list item */
+ul.blog-tag-cloud li {
+	list-style-type: none;
+	margin: 0;
+	display: inline;
+}
+
+/* Styles all links in the tag cloud in normal and visited state */
+ul.blog-tag-cloud li a:link,
+ul.blog-tag-cloud li a:visited {
+}
+
+/* Styles all links in the tag cloud in hover state */
+ul.blog-tag-cloud li a:hover {
+	text-decoration: underline;
+}
+
+/* Styles all links in the tag cloud in active state */
+ul.blog-tag-cloud li a:active {
+}
+
+/* tag size 1-20 styles */
+.blog-tag-size-1 {
+	font-size: 9px;
+}
+
+.blog-tag-size-2 {
+	font-size: 10px;
+}
+
+.blog-tag-size-3 {
+	font-size: 10px;
+}
+
+.blog-tag-size-4 {
+	font-size: 11px;
+}
+
+.blog-tag-size-5 {
+	font-size: 11px;
+}
+.blog-tag-size-6 {
+	font-size: 12px;
+}
+
+.blog-tag-size-7 {
+	font-size: 12px;
+}
+
+.blog-tag-size-8 {
+	font-size: 13px;
+}
+
+.blog-tag-size-9 {
+	font-size: 13px;
+}
+
+.blog-tag-size-10 {
+	font-size: 14px;
+}
+
+.blog-tag-size-11 {
+	font-size: 14px;
+}
+
+.blog-tag-size-12 {
+	font-size: 15px;
+}
+
+.blog-tag-size-13 {
+	font-size: 15px;
+}
+
+.blog-tag-size-14 {
+	font-size: 16px;
+}
+
+.blog-tag-size-15 {
+	font-size: 17px;
+}
+
+.blog-tag-size-16 {
+	font-size: 17px;
+}
+
+.blog-tag-size-17 {
+	font-size: 18px;
+}
+
+.blog-tag-size-18 {
+	font-size: 19px;
+}
+
+.blog-tag-size-19 {
+	font-size: 19px;
+}
+
+.blog-tag-size-20 {
+	font-size: 21px;
+}
+
+/* Order & Un-ordered List Support
+These CSS classes style the list style type of an un-ordered list. */
+
+ul.disc { list-style-type: disc;
+}
+
+ul.circle { list-style-type: circle;
+}
+
+ul.square { list-style-type: square;
+}
+
+ol.arabic-numbers { list-style-type: decimal;
+}
+
+ol.upper-alpha { list-style-type: upper-alpha;
+}
+
+ol.lower-alpha { list-style-type: lower-alpha;
+}
+
+ol.upper-roman { list-style-type: upper-roman;
+}
+
+ol.lower-roman { list-style-type: lower-roman;
+}
+
+/* @end *//* @group EXIF data */
+/* Data wrapper */
+.exif-data {
+}
+
+/* p tag classes for all exif data */
+p.exif-version {
+}
+
+p.exif-colour-space {
+}
+
+p.exif-focal-length {
+}
+
+p.exif-dimensions {
+}
+
+p.exif-pixel-y-dimension {
+}
+
+p.exif-oecf-value {
+}
+
+p.exif-subsec-time-original {
+}
+
+p.exif-exposure-mode {
+}
+
+p.exif-pixel-x-dimension {
+}
+
+p.exif-spatial-frequency-response {
+}
+
+p.exif-scene-capture-type {
+}
+
+p.exif-subject-location {
+}
+
+p.exif-shutter-speed {
+}
+
+p.exif-datetime-original {
+}
+
+p.exif-subsec-time {
+}
+
+p.exif-compressed-bits-per-pixel {
+}
+
+p.exif-flash-energy {
+}
+
+p.exif-saturation {
+}
+
+p.exif-brightness {
+}
+
+p.exif-exposure-time {
+}
+
+p.exif-f-number {
+}
+
+p.exif-file-source {
+}
+
+p.exif-gain-control {
+}
+
+p.exif-subject-area {
+}
+
+p.exif-cfa-pattern {
+}
+
+p.exif-scene-type {
+}
+
+p.exif-white-balance {
+}
+
+p.exif-flash {
+}
+
+p.exif-exposure-index {
+}
+
+p.exif-flashpix-version {
+}
+
+p.exif-device-setting-description {
+}
+
+p.exif-focalplane-x-resolution {
+}
+
+p.exif-image-uniqueid {
+}
+
+p.exif-components-configuration {
+}
+
+p.exif-light-source {
+}
+
+p.exif-sensing-method {
+}
+
+p.exif-aperture {
+}
+
+p.exif-sharpness {
+}
+
+p.exif-exposure-program {
+}
+
+p.exif-subject-distance {
+}
+
+p.exif-subsec-time-digitized {
+}
+
+p.exif-contrast {
+}
+
+p.exif-focalplane-resolution-unit {
+}
+
+p.exif-gamma {
+}
+
+p.exif-35mm-focal-length {
+}
+
+p.exif-datetime-digitized {
+}
+
+p.exif-subject-distance-range {
+}
+
+p.exif-custom-rendered {
+}
+
+p.exif-max-aperture {
+}
+
+p.exif-sound-file {
+}
+
+p.exif-metering-mode {
+}
+
+p.exif-spectral-sensitivity {
+}
+
+p.exif-exposure-bias {
+}
+
+p.exif-focalplane-y-resolution {
+}
+
+p.exif-iso-rating {
+}
+
+p.exif-maker-note {
+}
+
+p.exif-digital-zoom-ratio {
+}
+
+p.exif-user-comment {
+}
+
+/* @end */
+
+/* @group Digg block styling */
+
+.rss-items {
+	padding-left: 15px;
+	list-style-type: square;
+}
+
+h5 {
+	padding: 0;
+	font-size: 18px;
+	margin: 0;
+	color: #999;
+}
+
+
+
+/* @end */
+
+/* @group RapidBlog */
+
+.blog-entry-comments-body {
+	text-align: left;
+}
+
+.blog-entry-comments-body-even {
+	background-color: #eee;
+	text-align: left;
+	padding: 5px 8px;
+}
+
+.blog-entry-comments-body-odd {
+	background-color: #fff;
+	text-align: left;
+	padding: 5px 8px;
+}
+
+/* @end */
+
+/* @group Categories */
+
+#categories {
+	text-align: center;
+	display: block;
+	float: none;
+	background: transparent;
+	margin-right: auto;
+	margin-left: auto;
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+}
+
+.blog-entry-summary {
+	letter-spacing: -.5px;
+	text-align: left;
+	font-weight: normal;
+}
+
+/* styles the archives in the blog sidebar */
+
+#blog-archives {
+	width: 24%;
+	float: left;
+	text-align: left;
+	margin-right: 10px;
+	font-size: 10px;
+}
+
+.blog-archive-link-enabled {
+	background: url(images/greendoc.gif) no-repeat left center;
+	padding-left: 18px;
+}
+
+.blog-archive-link-enabled:hover {
+	background: url(images/greendochover.gif) no-repeat left;
+	padding-left: 18px;
+}
+
+.blog-archive-link-disabled {
+	padding-left: 18px;
+	background: url(images/blackdoc.gif) no-repeat left;
+}
+
+/* Styles the blog categories in the blog sidebar */
+
+#blog-categories {
+	float: left;
+	text-align: left;
+	margin-right: 10px;
+	width: 24%;
+	font-size: 10px;
+}
+
+.blog-category-link-enabled {
+	background: url(images/greendoc.gif) no-repeat left;
+	padding-left: 18px;
+}
+
+.blog-category-link-enabled:hover {
+	background: url(images/greendochover.gif) no-repeat left;
+	padding-left: 18px;
+}
+
+.blog-category-link-disabled {
+	padding-left: 18px;
+	background: url(images/blackdoc.gif) no-repeat left;
+}
+
+/* Styles the blog RSS feeds in the blog sidebar */
+
+#blog-rss-feeds {
+	width: 24%;
+	float: left;
+	text-align: left;
+	font-size: 10px;
+}
+
+.blog-rss-link {
+	background: url(images/greenrss.gif) no-repeat left;
+	padding-left: 18px;
+}
+
+.blog-rss-link:hover {
+	background: url(images/greenrsshover.gif) no-repeat left;
+	padding-left: 18px;
+}
+
+.blog-comments-rss-link {
+	background: url(images/greenchat.gif) no-repeat;
+	padding-left: 18px;
+	float: left;
+	font-size: 10px;
+}
+
+.blog-comments-rss-link:hover {
+	background: url(images/greenchathover.gif) no-repeat;
+	padding-left: 18px;
+	float: left;
+}
+	
+/* @end */

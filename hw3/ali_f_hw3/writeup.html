@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CS 171 Visualization - HW 3</title>
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/styles.css">
+<!-- thickbox -->
+  <script type="text/javascript"
+ src="writeup_files/jquery-latest.pack.js"></script>
+  <link type="text/css" rel="stylesheet"
+ href="writeup_files/thickbox.css">
+<!-- syntax highlighting -->
+  <link type="text/css" rel="stylesheet" href="writeup_files/shCore.css">
+  <link type="text/css" rel="stylesheet"
+ href="writeup_files/shThemeDefault.css">
+  <script type="text/javascript"
+ src="writeup_files/thickbox-compressed.js"></script>
+  <script type="text/javascript" src="writeup_files/shCore.js"></script>
+  <script type="text/javascript" src="writeup_files/shBrushPython.js"></script>
+  <script type="text/javascript" src="writeup_files/shBrushJava.js"></script>
+  <script type="text/javascript">//<![CDATA[
+     $(function() {
+       SyntaxHighlighter.all();
+     })
+    //]]></script>
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/colourtag-page13.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/large.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/off.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/none.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/variable.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/none_002.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/large.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/12px.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/colorbkg.html">
+  <link rel="stylesheet" type="text/css" media="screen"
+ href="writeup_files/normal.css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="robots" content="all">
+  <meta name="generator" content="RapidWeaver">
+  <link rel="icon" href="http://www.cs171.org/favicon.ico"
+ type="image/x-icon">
+  <link rel="shortcut icon" href="http://www.cs171.org/favicon.ico"
+ type="image/x-icon">
+  <link rel="apple-touch-icon"
+ href="http://www.cs171.org/apple-touch-icon.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<!-- Sprout theme for Rapidweaver designed by elixir graphics, www.elixirgraphics.com -->
+<div id="rwmbkg">
+<div id="container">
+<div class="hdrwrap">
+<div id="header">
+<div id="logospot"> <img src="writeup_files/seas-sheild-web.gif"
+ alt="Site logo" height="80" width="273"> </div>
+</div>
+</div>
+<div id="top">
+<div id="sitetitle">
+<h1 style="font-size: 28px;"> CS 171 Visualization HW 3:
+Multidimensional Data </h1>
+<h1 style="font-size: 20px;"> by Farooq Ali </h1>
+<div style="color: white;"> Due date: March 18th at 5pm EST </div>
+</div>
+<div id="topsidebar">
+</div>
+</div>
+<div id="navcontainer">
+<ul>
+  <li> <a href="#part1" rel="self">Part 1: Exploration with Tableau</a>
+  </li>
+  <li> <a href="#part2" rel="self">Part 2: Designing an Interaction</a>
+  </li>
+  <li> <a href="#part3" rel="self">Part 3: Interact with your
+Classmates</a> </li>
+</ul>
+</div>
+<div id="contentContainer">
+<div id="content">
+<h2> <a name="part1" id="part1">Part 1: Exploration with Tableau (20
+points)</a> </h2>
+<span style="font-weight: bold;">What is the relationship between
+operating system and numbers of years of programming experience?</span><br>
+<br>
+<div style="text-align: center;"><img
+ style="width: 959px; height: 396px;" alt=""
+ src="writeup_files/Tableau%20Q1%20Answer.png"><br>
+</div>
+<span style="font-weight: bold;"><span style="font-weight: bold;"><br>
+</span></span>The visualization uses small multiples with one multiple
+for each experience level (ordinal) encoded with y-position. For each
+experience level, the operating system (nominal) is encoded with
+y-position and color, and the number of students (quantitative) with a
+given amount experience using a given OS is encoded with line width.
+Windows XP is the most used operating system across all experience
+levels, with an increasing user base as the experience level rises. Mac
+OS and Windows Vista users are almost always equal across varying
+experience levels, and are most popular amongst students with 1 to 3
+years of experience.<br>
+<br>
+<span style="font-weight: bold;">What concentrations do students who
+are more comfortable with programming come from?</span><br>
+<br>
+<div style="text-align: center;"><img
+ style="width: 937px; height: 542px;" alt=""
+ src="writeup_files/Tableau%20Q2%20Answer.png"><br>
+</div>
+<br>
+The visualization above shows comfort level as different
+transformations. One is the original numeric comfort level (ordinal),
+while the other is a grouped view (ordinal), categorized as not
+comfortable (1 and 2), comfortable (3) and more comfortable (4 and 5).
+The raw comfort level is encoded with the height of line, the primary
+concentration is encoded with y-position and the number of students for
+each tuple is encoded with the length of the bar. This allows us to
+answer the question and dive into detail without any interaction. To
+answer the question, one need only compare the lengths of the dark blue
+lines. At the same time, the viewer can answer the question in more
+detail by drilling down into the ordinals within the "More comfortable"
+programmers. The visualization tells us that students who more
+comfortable with programming are studying are, in order: Computer
+Science, Information Management Systems, Economics, IT, Software
+Engineering, Applied Mathematics, Psychology, IT Management, Molecular
+and Cellular Biology, Digital Media and Electrical Engineering, to name
+most of them.<br>
+<br>
+<span style="font-weight: bold;">What programming languages do
+experienced programmers use?</span><br>
+<br>
+<div style="text-align: center;"><img
+ style="width: 960px; height: 341px;" alt=""
+ src="writeup_files/Tableau%20Q3%20Answer.png"><br>
+</div>
+<br>
+To employ a different take on this question than the previous, I
+filtered out the less experienced programmers and only used those
+programmers with more than 3 years of programming experience. This
+allowed me to create a simple bar chart with minimal encoding (language
+with y-position, # of students using that language with length of the
+bar) and the ability to quickly answer the question. The languages
+experienced programmers use, in order, are: Java, C, PHP, Ruby, Python,
+C#, C++, HTML/CC, JavaScript, and VB/VBScript. The interesting thing to
+note is that there were some languages that were completely filtered
+out, meaning that there are no highly experienced programmers who
+consider the languages to be their primary development language.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">What programming languages do
+experienced programmers who code the most often use?</span><br>
+<br>
+<div style="text-align: center;"><img
+ style="width: 819px; height: 523px;" alt=""
+ src="writeup_files/Tableau%20Q4%20Answer.png"><br>
+</div>
+<br>
+This visualization adds an extra dimension to the last one and changes
+the encodings. The three data types are the experience level (ordinal),
+coding frequency (ordinal) and the programming language (nominal).
+Position is the best encoding for all data types, so I used x-position
+to encode the coding frequency, y-position to encode the
+experience,&nbsp; color to encode the programming language, and size to
+encode the number of students who use a given language, code at a given
+frequency, and have a given amount of programming experience. As a
+result, the programmers who code most often and are most experienced
+bubble up to the top right of the chart, while the weakest and
+least-frequent programmers trickle down to the bottom left. Telling
+from the visualization, Java again takes the win, with C, C# and Python
+as runners up.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">What is the relationship between age,
+programming language, and programming experience?</span><br>
+<br>
+<div style="text-align: center;"><img
+ style="width: 652px; height: 540px;" alt=""
+ src="writeup_files/Tableau%20Q5%20Answer.png"><br
+ style="font-weight: bold;">
+</div>
+<p><br>
+I used a small multiples visualization to answer this question, with
+one multiple per programming language (nominal). Age (ordinal) is
+encoded with y-position and color within a multiple and programming
+experience (ordinal) is encoded with x-position. x-position suits
+experience very well because it is also a temporal data type for which
+left to right flow of increasing time is intuitive. The number of
+students of a given age and experience level using a given programming
+language is encoded with the size. A connected line instead of data
+points is very effective because it exploits the connection Gestalt
+principles and allows us to better see increases and decreases (modern
+day humans are good at noticing small angles away from horizontal and
+vertical lines). The visualization tells us that most of the 18-24-year
+old students use mainstream languages like C, PHP, Java and Ruby, with
+most users within that group increasing with years of experience. We
+can also tell that Java's use is dominated by experienced 25-44-year
+old programmers, while C is dominated by 18-24-year old programmers
+with a variety of programming experience, most of whom have been
+programming for 1 to 3 years. PHP also has users with a good spread of
+programming experience. Python is dominated by 24-44-year old students
+with a fair amount of programming experience. It's also worth noting
+that dynamic languages like Ruby, Python and JavaScript are mostly used
+by experienced people. Some interesting outliers in the visualization
+are 1) the 65-year old C++ programmer, 2) the less experienced
+programmers who consider BASIC and SQL to be their primary programming
+language and the small clique of 18-24-year old VB/VBScript programmers
+with 1 to 3 years of experience.<br>
+<br>
+</p>
+<hr>
+<p> &nbsp; </p>
+<h2> <a name="part2" id="part2">Part 2: Designing an Interaction (40
+points)</a> </h2>
+<a href="Homework%203%20Interaction%20Sketch.pdf">PDF slides</a> | <a
+ href="Homework%203%20Interaction%20Sketch.pptx">PowerPoint slides</a><br>
+<br>
+The
+task I chose to address was identifying the relationship between
+the programming strengths of the students and their primary programming
+languages. I'm particularly interested in how programming strength
+plays a role in the choice between dynamically typed languages (e.g.
+Ruby and Python) and statically typed languages (e.g. C# and Java), but
+that is by no means the only sub-task that this visualization aims to
+address.
+<p><br>
+</p>
+<p><span style="font-style: italic;">[Side note: Dynamically typed
+languages have recently started gaining popularity as expert
+programmers' weapon of choice. At the same time, traditional
+programmers maintain that compile-time type safety is better because it
+leaves less room for error. In my opinion, the situation is analogous
+to that of choosing between a sharp knife and a blunt one--stronger
+programmers feel confident to use sharper tools while weaker
+programmers and their technical managers feel the need for safer and
+more blunt tools at the cost of development speed. But of course
+there's a lot more to it than that.]</span><br>
+<br>
+</p>
+<p>Based on the data, I narrowly define strength as a multidimensional
+data type because it encompasses a programmer's level of experience and
+how comfortable he/she is with programming. As such, the three
+dimensions of the visualization I designed are:<br>
+</p>
+<p><br>
+<span style="font-weight: bold;">Programming language</span></p>
+<p>Being a nominal data type, with instances such as Java, Perl,
+Python, C# and Ruby, it is spatially encoded with the x-position.
+Position is the best perceived encoding for all three data types and is
+used in the visualization to allow easy identification of the
+programming language when performing the task. Text labels are used to
+indicate the programming language at each x-position.<br>
+<br>
+<span style="font-weight: bold;"><span style="font-weight: bold;"></span></span></p>
+<p><span style="font-weight: bold;"><span style="font-weight: bold;"></span>Comfort
+level with programming</span></p>
+<p>Comfort level is an ordinal data type ranging from 1 to 5, with 5
+being the most comfortable. For ordinal data types, the best encodings
+after position are density, saturation and hue. I chose to combine all
+three to encode it more generically as "color".&nbsp; The lighter,
+yellower and lower saturation colors move up to darker, bluer and
+higher saturation colors as the comfort level increases. Comfort level
+is also encoded with the y-position (increasing with comfort level)
+when ordering two data points with the same experience. This allows the
+stronger of two equally experienced students to be shown as such.<br>
+<br>
+<span style="font-weight: bold;"></span></p>
+<p><span style="font-weight: bold;">Years of programming experience</span><br>
+</p>
+<p>This is also an ordinal data type with four instances: less than 6
+months, between 6 months and 1 year, 1 to 3 years, and more than 3
+years.
+The next best encoding available for nominal data types is textture,
+but given the requirement of encoding one of the data types with size
+(or more accurately, area), I encoded experience with circular area (or
+more effectively, diameter) as well as y-position. The more experienced
+the student, the greater the y value. The y-position encoding serves
+two purposes: 1) to be able to show all data points, and 2) to allow
+better perception of the ordinal.<br>
+</p>
+<p><br>
+</p>
+<p style="text-align: center;"><img style="width: 720px; height: 540px;"
+ alt="Interaction Sketch Slide 2"
+ src="writeup_files/Homework%203%20Interaction%20Sketch/Slide2.png"><br>
+</p>
+<p><br>
+Based on these encodings, the stronger programmers in class are the
+larger and darker blue circles at the top while the weaker ones are the
+smaller and yellower circles towards the bottom. In order to better
+explore the data, the visualization exploits the following interaction
+capabilities:<br>
+</p>
+<p><br>
+<span style="font-weight: bold;">Additional detail on mouse over<br>
+</span></p>
+<p>When the user hovers their mouse over a circle representing a
+student, the following relevant details about the student are displayed
+in a tooltip:</p>
+<p>&nbsp;&nbsp;&nbsp; - How often the student writes code<br>
+&nbsp;&nbsp;&nbsp; - What concentration they are studying at Harvard<br>
+&nbsp;&nbsp;&nbsp; - What operating system they use<br>
+<br>
+</p>
+<div style="text-align: center;"><img
+ style="width: 720px; height: 540px;" alt="Interaction Sketch Slide 3"
+ src="writeup_files/Homework%203%20Interaction%20Sketch/Slide3.png"><br>
+</div>
+<p style="text-align: center;"><span style="font-weight: bold;">Figure 1</span><br>
+</p>
+<p><br>
+<span style="font-weight: bold;"></span></p>
+<p><span style="font-weight: bold;">Linked highlighting</span><br>
+</p>
+<p>The visualization links the following with highlighting:<br>
+&nbsp;&nbsp;&nbsp; - Currently moused over experience level in the
+legend highlights all students circles with the corresponding
+experience level (Figure 2)<br>
+&nbsp;&nbsp;&nbsp; - Currently moused over comfort level in the legend
+highlights
+all students circles with the corresponding comfort level (Figure 3)<br>
+&nbsp;&nbsp;&nbsp; - Currently moused over student circle with the
+corresponding experience and comfort levels in the legend (Figure 1)<br>
+</p>
+<p>&nbsp;&nbsp;&nbsp; - Currently moused over student circle with other
+students who share the same programming language,
+experience and comfort level (Figure 4)<br>
+</p>
+<p><br>
+<br>
+</p>
+<div style="text-align: center;"><img
+ style="width: 720px; height: 540px;" alt="Interaction Sketch Slide 4"
+ src="writeup_files/Homework%203%20Interaction%20Sketch/Slide4.png"><br>
+<span style="font-weight: bold;">Figure 2</span><br>
+</div>
+<p>&nbsp;&nbsp;&nbsp; <br>
+<br>
+</p>
+<div style="text-align: center;"><img
+ style="width: 720px; height: 540px;" alt="Interaction Sketch Slide 5"
+ src="writeup_files/Homework%203%20Interaction%20Sketch/Slide5.png"><br>
+</div>
+<div style="text-align: center;"><span style="font-weight: bold;">Figure
+3<br>
+<br>
+<img style="width: 720px; height: 540px;"
+ alt="Interaction Sketch Slide 6"
+ src="writeup_files/Homework%203%20Interaction%20Sketch/Slide6.png"><br>
+<span style="font-weight: bold;">Figure 4</span><br>
+<br>
+</span></div>
+<p><br>
+</p>
+<p>I chose to encode highlighted data with containment (3px border) and
+color (red). I chose red because studies indicate that red carries the
+strongest reaction of all the colors, with the level of reaction
+decreasing gradually with orange, yellow, and white, respectively. The
+change in brightness is also&nbsp; easily detected by our peripheral
+vision, reducing the number of eye fixations required to absorb linked
+data points.<br>
+<br>
+</p>
+<hr>
+<p> &nbsp; </p>
+<h2> <a name="part3" id="part3">Part 3: Interact with your Classmates
+(40 points)</a> </h2>
+<br>
+<div id="processing_sketch_container"><!--[if !IE]> --> <object
+ classid="java:processing_sketch.class" type="application/x-java-applet"
+ archive="processing_sketch/applet/processing_sketch.jar,processing_sketch/applet/core.jar"
+ standby="Loading Processing software..." height="830" width="1000"> <param
+ name="archive"
+ value="processing_sketch/applet/processing_sketch.jar,processing_sketch/applet/core.jar">
+<param name="mayscript" value="true"> <param name="scriptable"
+ value="true"><param name="image"
+ value="processing_sketch/applet/loading.gif"> <param name="boxmessage"
+ value="Loading Processing software..."> <param name="boxbgcolor"
+ value="#FFFFFF"> <param name="test_string" value="outer"><!--<![endif]--><object
+ classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+ codebase="http://java.sun.com/update/1.5.0/jinstall-1_5_0_15-windows-i586.cab"
+ standby="Loading Processing software..." height="830" width="1000"> <param
+ name="code" value="processing_sketch/applet/processing_sketch"> <param
+ name="archive"
+ value="processing_sketch/applet/processing_sketch.jar,processing_sketch/applet/core.jar">
+<param name="mayscript" value="true"> <param name="scriptable"
+ value="true"> <param name="image"
+ value="processing_sketch/applet/loading.gif"> <param name="boxmessage"
+ value="Loading Processing software..."> <param name="boxbgcolor"
+ value="#FFFFFF"> <param name="test_string" value="inner">
+<p> <strong> This browser does not have a Java Plug-in. <br>
+<a href="http://java.sun.com/products/plugin/downloads/index.html"
+ title="Download Java Plug-in"> Get the latest Java Plug-in here. </a>
+</strong> </p>
+</object><!--[if !IE]> --> </object><!--<![endif]--> </div>
+<p> </p>
+<p> Source code: <a
+ href="processing_sketch/applet/processing_sketch.pde">processing_sketch</a>
+<a href="processing_sketch/applet/CSVParser.java">CSVParser</a> <a
+ href="processing_sketch/applet/ComfortLevelLegendCircle.pde">ComfortLevelLegendCircle</a>
+<a href="processing_sketch/applet/Experience.java">Experience</a> <a
+ href="processing_sketch/applet/ExperienceLegendBox.pde">ExperienceLegendBox</a>
+<a href="processing_sketch/applet/Linkable.pde">Linkable</a> <a
+ href="processing_sketch/applet/Settings.pde">Settings</a> <a
+ href="processing_sketch/applet/Student.java">Student</a> <a
+ href="processing_sketch/applet/StudentCircle.pde">StudentCircle</a>
+<a href="processing_sketch/applet/StudentTest.java">StudentTest</a> <a
+ href="processing_sketch/applet/Survey.java">Survey</a>
+<a href="processing_sketch/applet/SurveyTest.java">SurveyTest</a> </p>
+<p><br>
+Based on my exploration of the visualization, I discovered several
+interesting themes:<br>
+</p>
+<p>1. The majority of the strongest programmers in our class use Java
+as their primary language. Runners up are C, PHP, Ruby, Python, C++ and
+C# users respectively. This could easily be attributed to the
+mainstream popularity of Java as a fundamental programming language.</p>
+<p>2. Dynamic languages users primarily consist of experienced
+programmers.<br>
+3. The weakest programmers have mostly used BASIC, HTML/CSS, and SQL,
+which is not very surprising given that these languages are either
+archaic or peripheral languages (for example, most people wouldn't even
+call HTML/CSS a language.) In the case of SQL, this could also be due
+to the presence of database-administration type of students.<br>
+4. I was surprised to see C as being the most permeating language in
+the class. The spread of majors/concentrations in this group seems to
+be skewed towards Computer Science students but also has a small
+amount, yet wide variety, of nontraditional majors. Could this be
+because foundation-level programming classes at Harvard are taught in C?<br>
+</p>
+<br>
+</div>
+</div>
+<div id="footer">
+<div id="footertype">
+<div id="footertype2">© 2008 Harvard University </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

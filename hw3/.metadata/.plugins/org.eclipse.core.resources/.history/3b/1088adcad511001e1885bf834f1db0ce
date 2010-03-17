@@ -1,0 +1,85 @@
+import java.util.Comparator;
+
+public class Experience implements Comparator {
+	public static Experience LESS_THAN_SIX_MONTHS = new Experience("Less than 6 months", 1);
+	public static Experience BETWEEN_SIX_MONTHS_AND_ONE_YEAR = new Experience("Between 6 months and 1 year", 2);
+	public static Experience OVER_THREE_YEARS = new Experience("Over 3 years", 4);
+	public static Experience ONE_TO_THREE_YEARS = new Experience("1 to 3 years", 3);
+	public static Experience[] ALL = new Experience[] { LESS_THAN_SIX_MONTHS, BETWEEN_SIX_MONTHS_AND_ONE_YEAR, OVER_THREE_YEARS, ONE_TO_THREE_YEARS };
+	
+	private String description;
+	private int order;
+
+	public Experience(String description, int order) {
+		super();
+		this.description = description;
+		this.setOrder(order);
+	}
+	
+	public static Experience parse(String s)
+	{
+		if(s.equals(OVER_THREE_YEARS.getDescription()))
+			return OVER_THREE_YEARS; 
+		if(s.equals(ONE_TO_THREE_YEARS.getDescription()))
+			return ONE_TO_THREE_YEARS; 
+		if(s.equals(BETWEEN_SIX_MONTHS_AND_ONE_YEAR.getDescription()))
+			return BETWEEN_SIX_MONTHS_AND_ONE_YEAR; 
+		if(s.equals(LESS_THAN_SIX_MONTHS.getDescription()))
+			return LESS_THAN_SIX_MONTHS;
+		
+		return new Experience("Unknown", 0); 
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setOrder(int order) {
+		this.order = order;
+	}
+
+	public int getOrder() {
+		return order;
+	}
+
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((description == null) ? 0 : description.hashCode());
+		result = prime * result + order;
+		return result;
+	}
+
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Experience other = (Experience) obj;
+		if (description == null) {
+			if (other.description != null)
+				return false;
+		} else if (!description.equals(other.description))
+			return false;
+		if (order != other.order)
+			return false;
+		return true;
+	}
+	
+	public String toString()
+	{
+		return description + " (order = " + order + ")";
+	}
+
+	public int compareTo(Experience experience) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

@@ -1,0 +1,45 @@
+public class Experience {
+	public static Experience MORE_THAN_THREE_YEARS = new Experience("> 3 years", 4);
+	public static Experience ONE_TO_THREE_YEARS = new Experience("1 - 3 years", 3);
+	public static Experience BETWEEN_SIX_MONTHS_AND_ONE_YEAR = new Experience("> 6 months and < 1 year", 4);
+	public static Experience LESS_THAN_SIX_MONTHS = new Experience("< 6 months", 4);
+	
+	private String description;
+	private int order;
+
+	public Experience(String description, int order) {
+		super();
+		this.description = description;
+		this.setOrder(order);
+	}
+	
+	public static Experience parse(String s)
+	{
+		if(s.equals(MORE_THAN_THREE_YEARS.getDescription()))
+			return MORE_THAN_THREE_YEARS; 
+		if(s.equals(ONE_TO_THREE_YEARS.getDescription()))
+			return ONE_TO_THREE_YEARS; 
+		if(s.equals(BETWEEN_SIX_MONTHS_AND_ONE_YEAR.getDescription()))
+			return BETWEEN_SIX_MONTHS_AND_ONE_YEAR; 
+		if(s.equals(LESS_THAN_SIX_MONTHS.getDescription()))
+			return LESS_THAN_SIX_MONTHS;
+		
+		return new Experience("Unknown", 10); 
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setOrder(int order) {
+		this.order = order;
+	}
+
+	public int getOrder() {
+		return order;
+	}
+}

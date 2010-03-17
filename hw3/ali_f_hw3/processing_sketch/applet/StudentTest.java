@@ -1,0 +1,17 @@
+import junit.framework.TestCase;
+
+public class StudentTest extends TestCase {
+	public void testSomething()
+	{
+		Student student = new Student("Computer Science,China,Mac OS,Over 3 years,Less than Once per Month,C++,3,\"i swim, jog and read\",Male,Over 65");
+		assertEquals("Computer Science", student.getConcentration());
+		assertEquals("Mac OS", student.getOperatingSystem());
+		assertEquals(Experience.OVER_THREE_YEARS, student.getExperience());
+		assertEquals("Less than Once per Month", student.getCodingFrequency());
+		assertEquals("C++", student.getProgrammingLanguage());
+		assertEquals(3, student.getComfortLevel());
+		assertEquals("i swim, jog and read", student.getInterestingFactoid());
+		assertEquals("Male", student.getGender());
+		assertEquals("Over 65", student.getAge());
+	}
+}

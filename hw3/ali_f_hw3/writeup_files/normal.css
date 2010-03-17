@@ -1,0 +1,44 @@
+/* @group File Sharing */
+
+.filesharing-description {
+	margin-bottom: 20px;
+	font-size: 12px;
+	color: #999999;
+}
+
+.filesharing-item {
+	padding: 5px 8px;
+	border: 1px solid #999999;
+	margin-bottom: 12px;
+	visibility: visible;
+	height: auto;
+}
+
+.filesharing-item-title a {
+	color: #888888;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.filesharing-item-title a:hover {
+	color: #444444;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.filesharing-item-title {
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: 8px;
+}
+
+.filesharing-item-description {
+	margin-bottom: 10px;
+	font-size: 11px;
+}
+
+/* @end */

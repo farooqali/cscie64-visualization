@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      CS 171 Visualization - HW 1
+    </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/styles.css" />
+    <!-- thickbox --> 
+    <script type="text/javascript" src="hw1_files/jquery-latest.pack.js"></script>
+    <link type="text/css" rel="stylesheet" href="hw1_files/thickbox.css" />
+    <!-- syntax highlighting -->
+    <link type="text/css" rel="stylesheet" href="hw1_files/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="hw1_files/shThemeDefault.css" />
+    <script type="text/javascript" src="hw1_files/thickbox-compressed.js"></script>
+    <script type="text/javascript" src="hw1_files/shCore.js"></script>
+    <script type="text/javascript" src="hw1_files/shBrushPython.js"></script>
+    <script type="text/javascript" src="hw1_files/shBrushJava.js"></script>
+    <script type="text/javascript">//<![CDATA[
+     $(function() {
+       SyntaxHighlighter.all();
+     })
+    //]]></script>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/colourtag-page13.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/medium.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/off.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/none.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/variable.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/none_002.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/large.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/12px.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/colorbkg.html" />
+    <link rel="stylesheet" type="text/css" media="screen" href="hw1_files/normal.css" />
+        
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <meta name="generator" content="RapidWeaver" />
+    <link rel="icon" href="http://www.cs171.org/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://www.cs171.org/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://www.cs171.org/apple-touch-icon.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <!-- Sprout theme for Rapidweaver designed by elixir graphics, www.elixirgraphics.com -->
+    <div id="rwmbkg">
+      <div id="container">
+        <div class="hdrwrap">
+          <div id="header2"></div>
+          <div id="header">
+            <div id="logospot">
+              <img src="hw1_files/seas-sheild-web.gif" alt="Site logo" height="80" width="273" />
+            </div>
+          </div>
+        </div>
+        <div id="top">
+          <div id="sitetitle">
+            <h1 style="font-size: 28px">
+              CS 171 Visualization HW 1: Data Scraping
+            </h1>
+            <h1 style="font-size: 20px">
+              by Farooq Ali
+            </h1>
+            <div style="color: white">
+              Due date: February 18th at 5pm EST
+            </div>
+          </div>
+          <div id="topsidebar">
+            <div class="sidebarHorizontal"></div>
+          </div>
+        </div>
+        <div id="navcontainer">
+          <ul>
+            <li>
+              <a href="#part1" rel="self">Part 1: Regular Expressions</a>
+            </li>
+            <li>
+              <a href="#part2" rel="self">Part 2: Scraping Text Data</a>
+            </li>
+            <li>
+              <a href="#part3" rel="self">Part 3: Scraping Numerical Data</a>
+            </li>
+          </ul>
+        </div>
+        <div id="contentContainer">
+          <div id="sidebarSide"></div>
+          <div id="content">
+            <h2>
+              <a name="part1" id="part1">Part 1: Regular Expressions (20 points)</a>
+            </h2>
+            <p>
+              1. Write a regular expression to describe strings containing only the letters {a, b, c} that are in sorted order.
+            </p>
+            <blockquote class="answer">
+              ^a*b*c*$
+            </blockquote>
+            <p>
+              2. Write a regular expression for each of the following sets of binary strings (ie. strings that contain only 0's and 1's).
+            </p>
+            <blockquote>
+              <p>
+                a) contains at least three consecutive 1s<br />
+              </p>
+              <blockquote class="answer">
+                ^(0|1)*111(0|1)*$
+              </blockquote>b) contains the substring 110<br />
+              <blockquote class="answer">
+                ^(0|1)*110(0|1)*$
+              </blockquote>c) contains the substring 1101100<br />
+              <blockquote class="answer">
+                ^(0|1)*1101100(0|1)*$
+              </blockquote>d) doesn't contain the substring 110<br />
+              <blockquote class="answer">
+                ^(0|10)*1*$
+              </blockquote>
+            </blockquote>
+            <p>
+              3. Write a regular expression that would return words whose letters are in alphabetical order, e.g., almost and beef.
+            </p>
+            <blockquote class="answer">
+              ^a*b*c*d*e*f*g*h*i*j*k*l*m*n*o*p*q*r*s*t*u*v*w*x*y*z*$
+            </blockquote>
+            <p>
+              &nbsp;
+            </p>
+            <hr />
+            <p>
+              &nbsp;
+            </p>
+            <h2>
+              <a name="part2" id="part2">Part 2: Scraping Text Data with Python (40 points)</a>
+            </h2>
+            <h3>
+              Scrape Text
+            </h3>
+            <p>
+              An English translation of the Holy Qur'an was scraped to obtain all the words and their occurrences in the entire text. There are 114 chapters in the Quran and all 114 of them are scraped.
+            </p>
+            <h4>
+              Data Source
+            </h4>
+            <p>
+              The script scrapes 114 pages (i.e. 114 different URLs, first of which is <a href="http://www.usc.edu/schools/college/crcc/engagement/resources/texts/muslim/quran/001.qmt.html">http://www.usc.edu/schools/college/crcc/engagement/resources/texts/muslim/quran/001.qmt.html</a>) that have almost the same structure. The URL format is defined as follows in the code:
+            </p>
+            <pre style="overflow: auto">
+<b>URL_TEMPLATE</b> = "http://www.usc.edu/schools/college/crcc/engagement/resources/texts/muslim/quran/%(chapter_number)s.qmt.html"
+</pre>where <code>chapter_number</code> is a 3 digit number ranging from 001 to 114. The padding of 0's is required as they form part of the filename on the server.
+            <p>
+              Other aspects of the data source, such as the specific translator, can be configured at the top of the script:
+            </p>
+            <pre style="overflow: auto">
+  <b>TRANSLATOR</b> = "YUSUFALI"
+  <b>FIRST_CHAPTER</b> = 1
+  <b>LAST_CHAPTER</b> = 114
+  <b>STOP_WORDS</b> = map(string.rstrip, open('stop_words.txt').readlines())
+  <b>VERSE_MATCHING_REGEX</b> = "&lt;strong&gt;%(translator)s:&lt;/strong&gt;([^&lt;]+?)&lt;br\s?/&gt;" % {'translator': TRANSLATOR}
+  <b>URL_TEMPLATE</b> = "http://www.usc.edu/schools/college/crcc/engagement/resources/texts/muslim/quran/%(chapter_number)s.qmt.html"
+  <b>DELIMITER</b> = "\t"
+</pre>
+            <h4>
+              Algorithm
+            </h4>
+            <p>
+              The scraper sequentially visits the page corresponding to each chapter, scrapes the text of each verse in the chapter, and then populates the dictionary of all words and their corresponding occurrence counts:
+            </p>
+            <pre class="brush: python">
+  for chapter_number in range(FIRST_CHAPTER,LAST_CHAPTER+1):
+      url = URL_TEMPLATE % {'chapter_number': str(chapter_number).zfill(3)}
+      soup = util.mysoupopen(url)
+
+      verse_matches = re.findall(VERSE_MATCHING_REGEX, str(soup))
+      verse_number = 1
+      # for each verse in chapter_number
+      for verse_match in verse_matches:
+          # remove punctuations and leading/trailing spaces
+          verse_text = re.sub("'|,|;|:|'|\"|\!|\?|\.|\(|\)|\-", " ", verse_match).strip()
+          verse_text = re.sub("\s{2,5}|\n", " ", verse_text)
+
+          # add verse's words to dictionary
+          for word in re.split("\s+", verse_text):
+            word = word.lower()
+            if(word in STOP_WORDS):
+              continue
+            if(word not in words):
+              words[word] = 0
+            words[word] += 1
+
+          verse_number += 1
+</pre>
+            <p>
+              The extraction of the words in a verse is fairly intelligent, as it does more than just white-space-based tokenization. It also:
+            </p>
+            <ul>
+              <li>Ignores stop-words such as "if", "a", "the", "then" to only consider meaningful words.
+                <pre class="brush: python; light: true">
+        if(word in STOP_WORDS):
+          continue
+        if(word not in words):
+          words[word] = 0
+        words[word] += 1
+      
+</pre>Stop words are stored in the file stop_words.txt and the words are loaded into <code>STOP_WORDS</code> during configuration.
+              </li>
+              <li>Removes all punctuation so that "peace" and "peace." are extracted as the same word.
+                <pre class="brush: python; light: true">
+        verse_text = re.sub("'|,|;|:|'|\"|\!|\?|\.|\(|\)|\-", " ", verse_match).strip()
+      
+</pre>
+              </li>
+              <li>Removes extraneous spaces and newlines to flatten verses into a single line with only one space between words.
+                <pre class="brush: python; light: true">
+        verse_text = re.sub("\s{2,5}|\n", " ", verse_text)
+      
+</pre>
+              </li>
+            </ul>
+            <p>
+              After collecting building the dictionary containing the words and their occurrences, the dictionary is printed to the standard output in a tab separated value format:
+            </p>
+            <pre class="brush: python">
+  print "Word" + DELIMITER + "Occurrences"
+  for word in sorted(words.keys()):
+    print word + DELIMITER + str(words[word])
+</pre>
+            <h4>
+              Output
+            </h4>
+            <p>
+              The script prints a TSV file to the standard output containing two fields/columns:
+            </p>
+            <ul>
+              <li>Word
+              </li>
+              <li>Occurrences
+              </li>
+            </ul>You can easily create a file from the script by piping the standard output to a file, like this:
+            <pre class="terminal">
+$ python scrape_quran.py &gt; output.txt
+</pre>
+            <h3>
+              Visualize
+            </h3><script type="text/javascript" src="http://manyeyes.alphaworks.ibm.com/manyeyes/visualizations/ac424060f7df11dd82d1000255111976/comments/ac4de9c4f7df11dd82d1000255111976.js?width=400&amp;height=350">
+</script>
+            <p>
+              &nbsp;
+            </p>
+            <hr />
+            <p>
+              &nbsp;
+            </p>
+            <h2>
+              <a name="part3" id="part3">Part 3: Your First Processing Sketch (40 points)</a>
+            </h2>
+            <p>
+              The goal of this section of the assignment is to get some more experience scraping data, and to get your feet wet with Processing.
+            </p>
+            <h3>
+              Scrape Numerical Data
+            </h3>
+            <p>
+              Think about an area that interests you, and find a source of numerical data online that you can scrape -- sports stats, the price of shoes on Zappos, the course numbers of the classes offered in different departments at Harvard, etc. This data should contain three different sets of numbers with at least 50 numbers each. Like the <em>milk-tea-coffee</em> example, you'll need an additional column of numbers that will serve as your x-axis (such as year). If your data does not contain this information, you can just number the entries (1 -&gt; number_of_entries). Note that all three of your numerical sets should contain the same number of items. Write a Python script to scrape this data, and place your script and data file in the <em>timeseries_sketch/data</em> directory. Include a README that explains how to run your Python script.
+            </p>
+            <p>
+              The data file should mimic the <em>data/milk-tea-coffee.tvs</em> file format. You can see an example file <a href="http://www.cs171.net/homework/hw1/example_file.tsv">here</a>.
+            </p>
+            
+            <!-- SOLUTION TO PART 3-->
+                        <h3>
+                          Scrape Numerical Data
+                        </h3>
+                        <p>
+                          Retail energy prices for the residential, commercial and industrial sectors in the US were scraped from Swivel. The average price of energy is measured in kilowatt-hours (kWh) for each month from January 1990 to January 2006 being used for residential, commercial and industrial purposes.
+                        </p>
+                        <h4>
+                          Data Source
+                        </h4>
+                        <p>
+                          The data on the website (<a href="http://www.swivel.com/data_sets/spreadsheet/1000052">http://www.swivel.com/data_sets/spreadsheet/1000052</a>) is represented as an HTML table from which 4 columns are scraped:
+                        </p>
+                        <ul>
+                          <li>Date (e.g. "May 2003")</li>
+                          <li>Average Residential Retail Price (e.g. "7.785443084")</li>
+                          <li>Average Commercial Retail Price (e.g. "8.364117049")</li>
+                          <li>Average Industrial Retail Price (e.g. "7906747347")</li>
+                        </ul>
+                        <p>
+                          You can configure other aspects of the data source or scraping algorithm at the top of the script:
+                        </p>
+                        <pre style="overflow: auto"># configuration
+<b>STARTING_YEAR</b> = 1996
+<b>DELIMITER</b> = "\t"
+<b>URL_TEMPLATE</b> = "http://www.swivel.com/data_sets/spreadsheet/1000052?page=%(page)s"
+<b>PAGES</b> = range(1,3)
+<b>DATE_COLUMN_PROPERTIES</b> = {"class": "DateTimeDataFormat "}
+<b>RESIDENTIAL_PRICE_COLUMN_PROPERTIES</b> = {'class': 'NumberDataFormat column1001109'}
+<b>COMMERCIAL_PRICE_COLUMN_PROPERTIES</b> = {'class': 'NumberDataFormat column1001110'}
+<b>INDUSTRIAL_PRICE_COLUMN_PROPERTIES</b> = {'class': 'NumberDataFormat column1001111'}
+                        </pre>
+                        <h4>
+                          Algorithm
+                        </h4>
+                        <p>
+                          The scraper sequentially visits each page, finds all rows (&lt;tr&gt;) elements and scrapes the desired column values if the first column is a date. 
+                        </p>
+                        <pre class="brush: python">for page in PAGES:
+  soup = util.mysoupopen(URL_TEMPLATE % {"page": page})
+  table = soup.find("table", {"class": "data"})
+
+  # for each row on page
+  for row in table.findAll("tr"):
+    date_column = row.find("td", DATE_COLUMN_PROPERTIES)
+    if date_column == None: continue
+
+    # scrape data from rows and store in prices_by_date
+    date_struct = time.strptime(date_column.string.strip(), "%b %Y")
+    date = datetime.date(date_struct[0], date_struct[1], 1)
+    residential_price = row.find("td", RESIDENTIAL_PRICE_COLUMN_PROPERTIES).string.strip()
+    commercial_price = row.find("td", COMMERCIAL_PRICE_COLUMN_PROPERTIES).string.strip()
+    industrial_price = row.find("td", INDUSTRIAL_PRICE_COLUMN_PROPERTIES).string.strip()
+    if date.year >= STARTING_YEAR:
+      prices_by_date[date] = {'residential': residential_price, 'commercial': commercial_price, 'industrial': industrial_price}</pre>
+                        <p>
+                          The dictionary of all average prices is built row by row, keyed by the month and year. The value corresponding to the month+year key is another dictionary, storing the prices of each of the three sectors.
+                          After collecting building the main dictionary, the prices are printed to the standard output in tab separated value format:
+                        </p>
+                        <pre class="brush: python"># print prices for each date
+for date in sorted(prices_by_date.keys()):
+  print date.strftime("%b") + " '" + date.strftime("%y") + DELIMITER + \
+        prices_by_date[date]['residential'] + DELIMITER + \
+        prices_by_date[date]['commercial'] + DELIMITER + \
+        prices_by_date[date]['industrial']</pre>
+                        <h4>
+                          Output
+                        </h4>
+                        <p>
+                          The script prints a TSV file to the standard output containing four fields/columns:
+                        </p>
+                        <ul>
+                          <li>Month and Year, e.g. May '07</li>
+                          <li>Average residential retail price</li>
+                          <li>Average commercial retail price</li>
+                          <li>Average industrial retail price</li>
+                        </ul>You can easily create a file from the script by piping the standard output to a file, like this:
+                        <pre class="terminal">$ python scrape_energy_prices.py &gt; energy_prices.tsv</pre>
+
+            <h3>
+              Visualize
+            </h3>
+            <p>
+              To visualize the energy prices, a timeseries line graph was used. A line graph was used because there were many data points (125) and a line would not be misleading.
+            </p>
+
+            <h4>Algorithm</h4>
+            <p>
+              The algorithm to generate the time series graph is a slight modification to Ben Fry&apos;s provided script. The main modifications are:
+              <ul>
+                <li>Instead of plotted points, a lined curve was used to represent the time series:
+                  <pre class="brush: java">// Draw a curved line graph
+strokeWeight(2); 
+stroke(#5679C1); 
+noFill(); 
+drawDataCurve(currentColumn); 
+...
+}
+
+// Draw the data as a curved line graph
+void drawDataCurve(int col) { 
+  beginShape(); 
+  for (int row = 0; row < rowCount; row++) { 
+    if (data.isValid(row, col)) { 
+      float value = interpolators[row].value;  
+      float x = map(row, 0, rowCount, plotX1, plotX2); 
+      float y = map(value, dataMin, dataMax, plotY2, plotY1); 
+      curveVertex(x, y); 
+      // double the curve points for the start and stop 
+      if ((row == 0) || (row == rowCount-1)) { 
+        curveVertex(x, y); 
+      } 
+    } 
+  } 
+  endShape(); 
+}</pre>
+                </li>
+                <li>
+                  Instead of mapping the x coordinate based on the numerical value of the month and year, the row count from the TSV was used. 
+                  This was done because for example, 200312 jumps straight to 200401, thus distorting the x-coordinate of an energy price point:
+                  <pre class="brush: java">float x = map(row, 0, rowCount, plotX1, plotX2);</pre>
+                </li>
+                <li>
+                  A mouse over highlighting of the data points was used to provide a higher degree of interaction with the graph:
+                  <pre class="brush: java">// For mouse rollover
+void drawDataHighlight(int col) { 
+  for (int row = 0; row < rowCount; row++) { 
+    if (data.isValid(row, col)) { 
+      float value = data.getFloat(row, col); 
+      float x = map(row, 0, rowCount, plotX1, plotX2); 
+      float y = map(value, dataMin, dataMax, plotY2, plotY1); 
+      if (dist(mouseX, mouseY, x, y) < 3) { 
+        strokeWeight(10); 
+        point(x, y); 
+        fill(0); 
+        textSize(10); 
+        textAlign(CENTER); 
+        text(nf(value, 0, 2) + " (" + months[row] + ")", x, y-8); 
+      } 
+    } 
+  } 
+}</pre>
+                </li>
+              </ul>
+            </p>
+            
+            <h3>Applet</h3>
+            <p>
+              <div style="text-align: center">
+                <a href="#TB_inline?height=500&amp;width=1000&amp;inlineId=timeseries_sketch_container" class="thickbox" style="border: 0;">
+                  <img src="hw1_files/energy_prices_snapshot.png" border="0" />
+                </a>
+              </div>
+            </p>
+            
+            <div id="timeseries_sketch_container" style="display: none">
+              <!--[if !IE]> -->
+              <object classid="java:timeseries_sketch.class" type="application/x-java-applet" archive="timeseries_sketch/applet/timeseries_sketch.jar" width="1000" height="500" standby="Loading Processing software...">
+                <param name="archive" value="timeseries_sketch.jar" />
+                <param name="mayscript" value="true" />
+                <param name="scriptable" value="true" />
+                <param name="image" value="loading.gif" />
+                <param name="boxmessage" value="Loading Processing software..." />
+                <param name="boxbgcolor" value="#FFFFFF" />
+                <param name="test_string" value="outer" />
+                <!--<![endif]-->
+                <object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" codebase="http://java.sun.com/update/1.5.0/jinstall-1_5_0_15-windows-i586.cab" width="1000" height="500" standby="Loading Processing software...">
+                  <param name="code" value="timeseries_sketch" />
+                  <param name="archive" value="timeseries_sketch/applet/timeseries_sketch.jar" />
+                  <param name="mayscript" value="true" />
+                  <param name="scriptable" value="true" />
+                  <param name="image" value="loading.gif" />
+                  <param name="boxmessage" value="Loading Processing software..." />
+                  <param name="boxbgcolor" value="#FFFFFF" />
+                  <param name="test_string" value="inner" />
+                  <p>
+                    <strong>This browser does not have a Java Plug-in.<br />
+                    <a href="http://java.sun.com/products/plugin/downloads/index.html" title="Download Java Plug-in">Get the latest Java Plug-in here.</a></strong>
+                  </p>
+                </object> <!--[if !IE]> -->
+              </object> <!--<![endif]-->
+            </div>
+            
+            <h3>Learnings</h3>
+            <p>
+              <ul>
+                <li>The data scraping was very easy. I have never programmed in Python, but it's very similar to Ruby. I was surprised to learn that some basic things such as 1) reading all the lines in a file and 2) parsing dates from strings were unnecessarily verbose.</li>
+                <li>I really enjoyed the visual output of Processing, but wasn't very excited about the functional nature of programming the visualization, such as global variables and global mouse events (vs object-specific registrations and events).</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="clearer"></div>
+        <div id="footer">
+          <div id="footertype">
+            <div id="bottomsidebar">
+              <div class="sidebarHorizontal"></div>
+            </div>
+            <div id="categories"></div>
+            <div class="clearer"></div>
+            <div id="breadcrumbcontainer"></div>
+            <div id="footertype2">
+              © 2008 Harvard University
+            </div>
+          </div>
+        </div>
+        <div class="bottombar"></div>
+      </div>
+    </div>
+  </body>
+</html>

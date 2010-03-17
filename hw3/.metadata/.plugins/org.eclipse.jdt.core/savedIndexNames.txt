@@ -1,0 +1,13 @@
+INDEX VERSION 1.125+/Users/fali/projects/cscie64/hw3/.metadata/.plugins/org.eclipse.jdt.core
+2293455564.index
+790664647.index
+233864429.index
+1791931649.index
+3224793320.index
+3941738062.index
+3484204191.index
+3063923675.index
+2561738076.index
+2068318559.index
+4111408494.index
+4043959229.index
